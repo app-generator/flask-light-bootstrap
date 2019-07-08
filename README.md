@@ -1,4 +1,4 @@
-﻿# [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
+# [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
 
 [Live Demo](https://flask-dashboard-light-bootstrap.appseed.us/) - Open-Source **Admin Dashboard** with [Light Bootstrap](https://www.creative-tim.com/product/light-bootstrap-dashboard) design coded in [Flask](http://flask.pocoo.org/)
 
@@ -48,6 +48,9 @@
 ## App Screenshots
 
 ![Flask Dashboard](https://github.com/app-generator/flask-dashboard-light-bootstrap/blob/master/screenshots/light-dashboard-flask-dashboard-notif.jpg)
+
+<br />
+
 ![Flask Dashboard](https://github.com/app-generator/flask-dashboard-light-bootstrap/blob/master/screenshots/light-dashboard-flask-dashboard-typo.jpg)
 
 ## Resources
