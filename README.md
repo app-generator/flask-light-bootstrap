@@ -1,23 +1,14 @@
-﻿## [Flask Dashboard Light](https://flask-dashboard-light-bootstrap.appseed.us/)
+﻿# [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
 
-Admin Dashboard with [Light Bootstrap](https://www.creative-tim.com/product/light-bootstrap-dashboard) design coded in [Flask](http://flask.pocoo.org/)
+[Live Demo](https://flask-dashboard-light-bootstrap.appseed.us/) - Open-Source **Admin Dashboard** with [Light Bootstrap](https://www.creative-tim.com/product/light-bootstrap-dashboard) design coded in [Flask](http://flask.pocoo.org/)
 
-<hr>
+<br />
 
 ![Flask Dashboard](https://github.com/app-generator/flask-dashboard-light-bootstrap/blob/master/screenshots/light-dashboard-flask-dashboard-intro.gif)
 
-<hr>
+<br />
 
-Demo app here - [Light Bootstrap - Flask Dashboard](https://flask-dashboard-light-bootstrap.appseed.us)
-
-**What is Flask?** Flask is a microframework for Python based on Werkzeug and Jinja2.
-
-### Screenshot - generic page
-
-![Flask Dashboard - Light Bootstrap, coded in  Flask](https://github.com/app-generator/flask-dashboard-light-bootstrap/blob/master/screenshots/light-dashboard-flask-dashboard-main.jpg)
-
-
-### Quick Start
+## Build from sources
 
 1. Clone the repo
   ```
@@ -43,8 +34,7 @@ Demo app here - [Light Bootstrap - Flask Dashboard](https://flask-dashboard-ligh
 
 6. Navigate to [http://localhost:5000](http://localhost:5000)
 
-Features
-------
+## Features
 
 - SQLite database
 - Login, Register
@@ -52,15 +42,15 @@ Features
 - FTP Deploy script. **Info**: this `require node.js` and the edit of `deploy.js` to add FTP server credentials. 
 
 ## Support
-- For issues and features request, use [Github](https://github.com/app-generator/flask-dashboard-light-bootstrap/issues/new) or join [AppSeed](https://appseed.us?ref=light-dashboard-flask) community on [Discord](https://discord.gg/fZC6hup)   
 
+- For issues and features request, use [Github](https://github.com/app-generator/flask-black-dashboard/issues/new) or join [AppSeed](https://appseed.us?ref=light-dashboard-flask) community on [Discord](https://discord.gg/fZC6hup)  
 
-### More Screenshots
+## App Screenshots
 
 ![Flask Dashboard](https://github.com/app-generator/flask-dashboard-light-bootstrap/blob/master/screenshots/light-dashboard-flask-dashboard-notif.jpg)
 ![Flask Dashboard](https://github.com/app-generator/flask-dashboard-light-bootstrap/blob/master/screenshots/light-dashboard-flask-dashboard-typo.jpg)
 
-### Resources
+## Resources
 
  - [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - app info
  - Product [documentation](https://docs.appseed.us/admin-dashboards/flask-dashboard-light-bootstrap/)
