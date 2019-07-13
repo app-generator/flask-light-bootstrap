@@ -1,7 +1,6 @@
 # [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
 
-[Live Demo](https://flask-dashboard-light-bootstrap.appseed.us/) - Open-Source **Admin Dashboard** with [Light Bootstrap](https://www.creative-tim.com/product/light-bootstrap-dashboard) design coded in [Flask](http://flask.pocoo.org/)
-
+Open-Source **admin dashboard** with **Light Bootstrap** design coded in **Flask**
 <br />
 
 ![Flask Dashboard](https://github.com/app-generator/flask-dashboard-light-bootstrap/blob/master/screenshots/light-dashboard-flask-dashboard-intro.gif)
@@ -32,7 +31,7 @@
   $ python app.py
   ```
 
-6. Navigate to [http://localhost:5000](http://localhost:5000)
+6. Navigate to **http://localhost:5000](http://localhost:5000)
 
 <br />
 
