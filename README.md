@@ -1,6 +1,7 @@
 # [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
 
 Open-Source **admin dashboard** with **Light Bootstrap** design coded in **Flask**
+
 <br />
 
 ![Flask Dashboard](https://github.com/app-generator/flask-dashboard-light-bootstrap/blob/master/screenshots/light-dashboard-flask-dashboard-intro.gif)
