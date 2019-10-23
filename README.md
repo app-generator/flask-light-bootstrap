@@ -1,6 +1,10 @@
 # [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
 
-Open-Source **admin dashboard** with **Light Bootstrap** design coded in **Flask**
+Open-Source and Free **[admin dashboard](https://appseed.us/admin-dashboards)** with Light Bootstrap Design coded in **[Flask](https://palletsprojects.com/p/flask/)**. **Dashboard** features:
+- SQLite database, SQLAlchemy ORM
+- Autehtication Flow (login, register)
+- Static Build `python ./static.py` via Frozen-Flask
+- **MIT License** 
 
 <br />
 
@@ -10,38 +14,18 @@ Open-Source **admin dashboard** with **Light Bootstrap** design coded in **Flask
 
 ## Build from sources
 
-1. Clone the repo
-  ```
-  $ git clone https://github.com/app-generator/flask-dashboard-light-bootstrap.git
-  $ cd flask-dashboard-light-bootstrap
-  ```
-
-2. Initialize and activate a virtualenv:
-  ```
-  $ virtualenv --no-site-packages env
-  $ source env/bin/activate
-  ```
-
-3. Install the dependencies:
-  ```
-  $ pip install -r requirements.txt
-  ```
-
-5. Run the development server:
-  ```
-  $ python app.py
-  ```
-
-6. Navigate to **http://localhost:5000](http://localhost:5000)
-
-<br />
-
-## Features
-
-- SQLite database
-- Login, Register
-- Static Build `python ./static.py`. The static build goes to `app/build` directory 
-- FTP Deploy script. **Info**: this `require node.js` and the edit of `deploy.js` to add FTP server credentials. 
+```bash
+$ # clone the sources
+$ git clone https://github.com/app-generator/flask-dashboard-light-bootstrap.git
+$ cd flask-dashboard-light-bootstrap
+$
+$ # install modules using a virtualenv
+$ virtualenv --no-site-packages env
+$ source env/bin/activate
+$
+$ python app.py
+$ # app is running on port 5000
+```
 
 <br />
 
