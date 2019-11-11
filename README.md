@@ -1,10 +1,10 @@
-# [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
+# [Flask Dashboard Light](http://localhost:5005/admin-dashboards/flask-dashboard-light-bootstrap)
 
-Open-Source and Free **[admin dashboard](https://appseed.us/admin-dashboards)** with Light Bootstrap Design coded in **[Flask](https://palletsprojects.com/p/flask/)**. **Dashboard** features:
-- SQLite database, SQLAlchemy ORM
-- Autehtication Flow (login, register)
-- Static Build `python ./static.py` via Frozen-Flask
-- **MIT License** 
+**[Open-Source Admin Dashboard](http://localhost:5005/admin-dashboards/flask-dashboard-light-bootstrap)** coded in **Flask Web Framework** on top of **Light Dashboard** design, crafted by Creative-Tim agency. **Dashboard** features:
+
+- SQLite database
+- SQLAlchemy ORM
+- Session-Based authentication flow (login, register)
 
 <br />
 
@@ -55,14 +55,21 @@ $ # app is running on port 5000
 
 <br />
 
+## Support
+---
+
+- Free support via eMail < [support @ appseed.us](https://appseed.us/support) > and [Github](https://github.com/app-generator/flask-dashboard-light-bootstrap/issues/)
+- 24/7 Live Support via [Discord](https://discord.gg/fZC6hup) for paid plans and commercial products.
+
+<br />
+
 ## Resources
 
- - [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - app info
- - Product [documentation](https://docs.appseed.us/admin-dashboards/flask-dashboard-light-bootstrap/)
- - Live [DEMO](https://flask-dashboard-light-bootstrap.appseed.us/)
- - Related [Blog Article](https://blog.appseed.us/flask-dashboard-light-learn-flask-by-coding-dashboards/)
- - [Light Bootstrap Dashboard](https://www.creative-tim.com/product/light-bootstrap-dashboard) - design information (Creative-Tim)
- - [Flask](http://flask.pocoo.org/) - official website
+- [Flask Dashboard Light](http://localhost:5005/admin-dashboards/flask-dashboard-light-bootstrap) - Product page
+- [Flask Dashboard Light](https://flask-dashboard-light-bootstrap.appseed.us/) - Live DEMO
+- [Flask Framework](https://www.palletsprojects.com/p/flask/) - Offcial website
+- [Flask Dashboard - Open-Source Boilerplates](https://dev.to/sm0ke/flask-dashboard-open-source-boilerplates-dkg) - A popular article published on Dev.to platform
+- [Flask Dashboard](https://admin-dashboards.com/tags/flask-dashboard) - Index provided by **Admin-Dashboards.com**
 
 <br />
 
