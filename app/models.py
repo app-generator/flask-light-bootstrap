@@ -1,11 +1,7 @@
 # -*- encoding: utf-8 -*-
 """
-Light Bootstrap Dashboard - coded in Flask
-
-Author  : AppSeed App Generator
-Design  : Creative-Tim.com
-License : MIT 
-Support : https://appseed.us/support 
+License: MIT
+Copyright (c) 2019 - present AppSeed.us
 """
 
 from app         import db
@@ -24,7 +20,7 @@ class User(UserMixin, db.Model):
         self.email      = email
 
     def __repr__(self):
-        return '<User %r>' % (self.id)
+        return '<User %r - %s>' % (self.id) % (self.email)
 
     def save(self):
 
