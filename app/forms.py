@@ -1,11 +1,7 @@
 # -*- encoding: utf-8 -*-
 """
-Light Bootstrap Dashboard - coded in Flask
-
-Author  : AppSeed App Generator
-Design  : Creative-Tim.com
-License : MIT 
-Support : https://appseed.us/support 
+License: MIT
+Copyright (c) 2019 - present AppSeed.us
 """
 
 from flask_wtf          import FlaskForm
