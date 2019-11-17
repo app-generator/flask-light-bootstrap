@@ -1,6 +1,8 @@
-# [Flask Dashboard Light](http://localhost:5005/admin-dashboards/flask-dashboard-light-bootstrap)
+# [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
 
-**[Open-Source Admin Dashboard](http://localhost:5005/admin-dashboards/flask-dashboard-light-bootstrap)** coded in **Flask Web Framework** on top of **Light Dashboard** design, crafted by Creative-Tim agency. **Dashboard** features:
+**[Open-Source Admin Dashboard](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)** coded in **Flask Web Framework** on top of **Light Dashboard** design, crafted by Creative-Tim agency. **Dashboard** features:
+
+<br />
 
 - SQLite database
 - SQLAlchemy ORM
@@ -8,39 +10,39 @@
 
 <br />
 
-![Flask Dashboard](https://github.com/app-generator/flask-dashboard-light-bootstrap/blob/master/screenshots/light-dashboard-flask-dashboard-intro.gif)
+![Flask Dashboard Light - Open-Source Flask Dashboard.](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-light-bootstrap-intro.gif)
 
 <br />
 
 ## Build from sources
 
 ```bash
-$ # clone the sources
+$ # Clone the sources
 $ git clone https://github.com/app-generator/flask-dashboard-light-bootstrap.git
 $ cd flask-dashboard-light-bootstrap
 $
-$ # install modules using a virtualenv
+$ # Virtualenv modules installation (Unix based systems)
 $ virtualenv --no-site-packages env
 $ source env/bin/activate
 $
-$ # install deps
-$ pip install -r requirements.txt
+$ # Virtualenv modules installation (Windows based systems)
+$ # virtualenv --no-site-packages env
+$ # .\env\Scripts\activate.bat
+$ 
+$ # Install requirements
+$ pip3 install -r requirements.txt
 $
 $ # Set the FLASK_APP environment variable
-$ (Unix) export FLASK_APP=run.py
+$ (Unix/Mac) export FLASK_APP=run.py
 $ (Windows) set FLASK_APP=run.py
 $ (Powershell) $env:FLASK_APP = ".\run.py"
-$ 
-$ # Create SQLite database using the Flask console
-$ flask shell
->> from app import db
->> db.create_all()
->> quit()
-$ # SQLite database.db should be created in the app folder:
-$ # app\database.db
 $
-$ flask run
-$ # app is running on port 5000
+$ # Run the application
+$ # --host=0.0.0.0 - expose the app on all network interfaces (default 127.0.0.1)
+$ # --port=5000    - specify the app port (default 5000)  
+$ flask run --host=0.0.0.0 --port=5000
+$
+$ # Access the app in browser: http://127.0.0.1:5000/
 ```
 
 <br />
@@ -58,16 +60,16 @@ $ # app is running on port 5000
 ## Support
 ---
 
-- Free support via eMail < [support @ appseed.us](https://appseed.us/support) > and [Github](https://github.com/app-generator/flask-dashboard-light-bootstrap/issues/)
+- Free support via eMail < [support @ appseed.us](https://appseed.us/support) > and [Github](https://github.com/app-generator/flask-argon-dashboard/issues/)
 - 24/7 Live Support via [Discord](https://discord.gg/fZC6hup) for paid plans and commercial products.
 
 <br />
 
 ## Resources
 
-- [Flask Dashboard Light](http://localhost:5005/admin-dashboards/flask-dashboard-light-bootstrap) - Product page
+- [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Product page
 - [Flask Dashboard Light](https://flask-dashboard-light-bootstrap.appseed.us/) - Live DEMO
-- [Flask Framework](https://www.palletsprojects.com/p/flask/) - Offcial website
+- [Flask Framework](https://www.palletsprojects.com/p/flask/) - The offcial website
 - [Flask Dashboard - Open-Source Boilerplates](https://dev.to/sm0ke/flask-dashboard-open-source-boilerplates-dkg) - A popular article published on Dev.to platform
 - [Flask Dashboard](https://admin-dashboards.com/tags/flask-dashboard) - Index provided by **Admin-Dashboards.com**
 
@@ -75,4 +77,3 @@ $ # app is running on port 5000
 
 ---
 [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) provided by **AppSeed**
-
