@@ -1,17 +1,18 @@
 # -*- encoding: utf-8 -*-
 """
-Light Bootstrap Dashboard - coded in Flask
-
-Author  : AppSeed App Generator
-Design  : Creative-Tim.com
-License : MIT 
-Support : https://appseed.us/support 
+License: MIT
+Copyright (c) 2019 - present AppSeed.us
 """
 
-from flask               import render_template, request, url_for, redirect
+# Python modules
+import os, logging 
+
+# Flask modules
+from flask               import render_template, request, url_for, redirect, send_from_directory
 from flask_login         import login_user, logout_user, current_user, login_required
 from werkzeug.exceptions import HTTPException, NotFound, abort
 
+# App modules
 from app        import app, lm, db, bc
 from app.models import User
 from app.forms  import LoginForm, RegisterForm
@@ -21,13 +22,13 @@ from app.forms  import LoginForm, RegisterForm
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-# authenticate user
+# Logout user
 @app.route('/logout.html')
 def logout():
     logout_user()
     return redirect(url_for('index'))
 
-# register user
+# Register a new user
 @app.route('/register.html', methods=['GET', 'POST'])
 def register():
     
@@ -74,7 +75,7 @@ def register():
     return render_template('layouts/default.html',
                             content=render_template( 'pages/register.html', form=form, msg=msg ) )
 
-# authenticate user
+# Authenticate user
 @app.route('/login.html', methods=['GET', 'POST'])
 def login():
     
@@ -108,45 +109,13 @@ def login():
     return render_template('layouts/default.html',
                             content=render_template( 'pages/login.html', form=form, msg=msg ) )
 
-# Render the user page
-@app.route('/user.html')
-def user():
-
-    return render_template('layouts/default.html',
-                            content=render_template( 'pages/user.html') )
-
-# Render the table page
-@app.route('/table.html')
-def table():
-
-    return render_template('layouts/default.html',
-                            content=render_template( 'pages/table.html') )
-
-# Render the typography page
-@app.route('/typography.html')
-def typography():
-
-    return render_template('layouts/default.html',
-                            content=render_template( 'pages/typography.html') )
-
-# Render the icons page
-@app.route('/icons.html')
-def icons():
-
-    return render_template('layouts/default.html',
-                            content=render_template( 'pages/icons.html') )
-
-# Render the icons page
-@app.route('/notifications.html')
-def notifications():
-
-    return render_template('layouts/default.html',
-                            content=render_template( 'pages/notifications.html') )
-
 # App main route + generic routing
 @app.route('/', defaults={'path': 'index.html'})
 @app.route('/<path>')
 def index(path):
+
+    if not current_user.is_authenticated:
+        return redirect(url_for('login'))
 
     content = None
 
@@ -157,4 +126,10 @@ def index(path):
                                 content=render_template( 'pages/'+path) )
     except:
         
-        return 'Oupsss :(', 404
+        return render_template('layouts/auth-default.html',
+                                content=render_template( 'pages/404.html' ) )
+
+# Return sitemap 
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'sitemap.xml')
