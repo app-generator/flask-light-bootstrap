@@ -1,11 +1,7 @@
 # -*- encoding: utf-8 -*-
 """
-Light Bootstrap Dashboard - coded in Flask
-
-Author  : AppSeed App Generator
-Design  : Creative-Tim.com
-License : MIT 
-Support : https://appseed.us/support 
+License: MIT
+Copyright (c) 2019 - present AppSeed.us
 """
 
 import os
@@ -28,4 +24,10 @@ bc = Bcrypt      (app) # flask-bcrypt
 lm = LoginManager(   ) # flask-loginmanager
 lm.init_app(app) # init the login manager
 
+# Setup database
+@app.before_first_request
+def initialize_database():
+    db.create_all()
+
+# Import routing, models and Start the App
 from app import views, models
