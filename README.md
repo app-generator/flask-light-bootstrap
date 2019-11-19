@@ -1,12 +1,11 @@
 # [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
 
-**[Open-Source Admin Dashboard](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)** coded in **Flask Web Framework** on top of **Light Dashboard** design, crafted by Creative-Tim agency. **Dashboard** features:
-
-<br />
+**[Open-Source Admin Dashboard](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)** coded in **Flask Framework** on top of **Light Dashboard** design. **Features**:
 
 - SQLite database
 - SQLAlchemy ORM
 - Session-Based authentication flow (login, register)
+- UI Kit: [Light Dashboard](https://github.com/app-generator/fork-light-bootstrap-dashboard) by Creative-Tim
 
 <br />
 
