@@ -57,20 +57,25 @@ $ # Access the app in browser: http://127.0.0.1:5000/
 <br />
 
 ## Support
----
 
-- Free support via eMail < [support @ appseed.us](https://appseed.us/support) > and [Github](https://github.com/app-generator/flask-argon-dashboard/issues/)
+- Free support via eMail < [support @ appseed.us](https://appseed.us/support) > and **Github** issues tracker
 - 24/7 Live Support via [Discord](https://discord.gg/fZC6hup) for paid plans and commercial products.
 
 <br />
 
-## Resources
+## Credits & Links
 
 - [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Product page
 - [Flask Dashboard Light](https://flask-dashboard-light-bootstrap.appseed.us/) - Live DEMO
 - [Flask Framework](https://www.palletsprojects.com/p/flask/) - The offcial website
 - [Flask Dashboard - Open-Source Boilerplates](https://dev.to/sm0ke/flask-dashboard-open-source-boilerplates-dkg) - A popular article published on Dev.to platform
 - [Flask Dashboard](https://admin-dashboards.com/tags/flask-dashboard) - Index provided by **Admin-Dashboards.com**
+
+<br />
+
+## License
+
+@MIT
 
 <br />
 
