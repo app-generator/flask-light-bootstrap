@@ -104,7 +104,7 @@ def login():
             else:
                 msg = "Wrong password. Please try again."
         else:
-            msg = "Unkkown user"
+            msg = "Unkown user - please register."
 
     return render_template('layouts/default.html',
                             content=render_template( 'pages/login.html', form=form, msg=msg ) )
