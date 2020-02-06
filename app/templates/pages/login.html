@@ -9,6 +9,12 @@
 
                         {% if msg %}
                             <p>{{ msg | safe }}</p>
+                        {% else %}
+                        <p>
+                            Use default credentials: test / pass
+                            <br />
+                            OR <a href={{ url_for('register') }} >create your own user</a>
+                        </p>                            
                         {% endif %}
                     </div>
 
@@ -48,7 +54,7 @@
 
                             </div>
 
-                            <input type='submit' name='submit' value='Login' class="primary"/> or <a href={{ url_for('register') }}>Register</a>
+                            <input type='submit' name='submit' value='Login' class="primary"/> or <a href={{ url_for('register') }} >Register</a>
                             <div class="clearfix"></div>
                         </form>
                     </div>
