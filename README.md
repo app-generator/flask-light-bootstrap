@@ -11,6 +11,14 @@
 
 <br />
 
+## Dashboard Links
+
+- [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - the product page
+- [Flask Dashboard Light](https://docs.appseed.us/admin-dashboards/flask-dashboard-light/) - documentation
+- [Flask Dashboard Light](https://flask-dashboard-light.appseed.us/login.html) - LIVE Demo
+
+<br />
+
 ## Want more? Go PRO!
 
 PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup))
