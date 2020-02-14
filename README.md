@@ -150,16 +150,6 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 
 <br />
 
-## Credits & Links
-
-- [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Product page
-- [Flask Dashboard Light](https://flask-dashboard-light-bootstrap.appseed.us/) - Live DEMO
-- [Flask Framework](https://www.palletsprojects.com/p/flask/) - The offcial website
-- [Flask Dashboard - Open-Source Boilerplates](https://dev.to/sm0ke/flask-dashboard-open-source-boilerplates-dkg) - A popular article published on Dev.to platform
-- [Flask Dashboard](https://admin-dashboards.com/tags/flask-dashboard) - Index provided by **Admin-Dashboards.com**
-
-<br />
-
 ## License
 
 @MIT
