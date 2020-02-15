@@ -5,13 +5,19 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Login</h4>
+                        <h4 class="card-title">Register</h4>
 
+                        <br />
                         {% if msg %}
                             <p>{{ msg | safe }}</p>
+                        {% else %}
+                            Add your credentials 
+                            <br />
+                            OR <a href={{ url_for('login') }} >authenticate</a> using an existing account.                            
                         {% endif %}
                     </div>
 
+                    <br />
                     <div class="card-body">
                         <form method="post" action="">
                             

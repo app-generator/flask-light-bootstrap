@@ -7,17 +7,17 @@
                     <div class="card-header">
                         <h4 class="card-title">Login</h4>
 
+                        <br />
                         {% if msg %}
                             <p>{{ msg | safe }}</p>
                         {% else %}
-                        <p>
                             Use default credentials: test / pass
                             <br />
                             OR <a href={{ url_for('register') }} >create your own user</a>
-                        </p>                            
                         {% endif %}
                     </div>
 
+                    <br />
                     <div class="card-body">
                         <form method="post" action="">
                             
