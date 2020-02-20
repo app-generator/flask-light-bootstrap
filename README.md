@@ -2,8 +2,6 @@
 
 **Open-Source Admin Dashboard** coded in **[Flask Framework](https://palletsprojects.com/p/flask/)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
 
-<br />
-
 ## Dashboard Features:
 
 - SQLite database
@@ -158,7 +156,6 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 <br />
 
 ## Credits & Links
----
 
 <br />
 
