@@ -43,11 +43,11 @@ $ git clone https://github.com/app-generator/flask-dashboard-light-bootstrap.git
 $ cd flask-dashboard-light-bootstrap
 $
 $ # Virtualenv modules installation (Unix based systems)
-$ virtualenv --no-site-packages env
+$ virtualenv env
 $ source env/bin/activate
 $
 $ # Virtualenv modules installation (Windows based systems)
-$ # virtualenv --no-site-packages env
+$ # virtualenv env
 $ # .\env\Scripts\activate.bat
 $ 
 $ # Install requirements
