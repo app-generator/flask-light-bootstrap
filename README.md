@@ -1,4 +1,4 @@
-# [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
+# [Flask Dashboard - Light Bootstrap Design](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
 
 > **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - Features:
 
@@ -12,9 +12,9 @@
 
 > Links
 
-- [Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - the product page
-- [Flask Dashboard Light](https://docs.appseed.us/admin-dashboards/flask-dashboard-light/) - documentation
-- [Flask Dashboard Light](https://flask-dashboard-light.appseed.us/login.html) - LIVE Demo
+- [Flask Dashboard - Light Bootstrap Design](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Product page
+- [Flask Dashboard Light Docs](https://docs.appseed.us/admin-dashboards/flask-dashboard-light/) - Documentation
+- [Flask Dashboard Light Demo](https://flask-dashboard-light.appseed.us/login.html) - LIVE App
 - More [Flask Admin Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **AppSeed**
 - [Free Admin Dashboards](https://appseed.us/admin-dashboards/open-source) - index hosted by **AppSeed**
 
@@ -167,4 +167,4 @@ Light Bootstrap Dashboard is a Bootstrap4 admin dashboard template designed to b
 <br />
 
 ---
-**[Flask Dashboard Light](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Flask Dashboard - Light Bootstrap Design](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
