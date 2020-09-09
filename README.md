@@ -1,22 +1,23 @@
-# [Flask Dashboard - Light Bootstrap Design](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
+# [Flask Dashboard - Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
 
-> **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - Features:
+> Template [boilerplate code](https://appseed.us/boilerplate-code) used by [AppSeed](https://appseed.us) to generate simple admin dashboards coded in [Flask](https://palletsprojects.com/p/flask/) - Features:
 
-- UI Kit: **[Light Bootstrap Dashboard](https://www.creative-tim.com/product/light-bootstrap-dashboard?ref=appseed)** (Free version) provided by **Creative-Tim**- SQLite database
-- SQLAlchemy ORM
-- Session-Based authentication flow (login, register)
-- Deployment scripts: Docker, Gunicorn / Nginx
-- **MIT License**
-- Free support via **Github** 
-- Paid Support **24/7 LIVE Support** via [Discord](https://discord.gg/fZC6hup)
+- UI Kit: **Light Bootstrap** (Free Version) by **Creative-Tim**
+- SQLite, PostgreSQL, SQLAlchemy ORM
+- Alembic (DB schema migrations)
+- Modular design with **Blueprints**
+- Session-Based authentication (via **flask_login**)
+- Forms validation
+- Deployment scripts: Docker, Gunicorn / Nginx, Heroku
+- **[MIT License](https://github.com/app-generator/license-mit)**
+- Free support via **Github** and [Discord](https://discord.gg/fZC6hup).
 
 > Links
 
-- [Flask Dashboard - Light Bootstrap Design](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Product page
-- [Flask Dashboard Light Docs](https://docs.appseed.us/admin-dashboards/flask-dashboard-light/) - Documentation
-- [Flask Dashboard Light Demo](https://flask-dashboard-light.appseed.us/login.html) - LIVE App
-- More [Flask Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **AppSeed**
-- More [Admin Dashboards](https://appseed.us/admin-dashboards) - index hosted by **AppSeed**
+- [Flask Dashboard - Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Official product page
+- [Flask Light Bootstrap Demo](https://flask-dashboard-light-bootstrap.appseed.us/) - LIVE App
+- More [Flask Admin Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **[AppSeed](https://appseed.us)**
+- [Open-Source Admin Dashboards](https://appseed.us/admin-dashboards/open-source) - index hosted by **[AppSeed](https://appseed.us)**
 
 <br />
 
@@ -31,14 +32,14 @@ PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Suppo
 <br />
 <br />
 
-![Flask Dashboard Light - Open-Source Flask Dashboard.](https://raw.githubusercontent.com/app-generator/static/master/products/flask-dashboard-light-bootstrap-screen.png)
+![Boierplate Code Flask Dashboard - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/flask-dashboard-light-bootstrap/master/media/flask-dashboard-light-bootstrap-screen.png)
 
 <br />
 
-## Build from sources
+## How to use it
 
 ```bash
-$ # Clone the sources
+$ # Get the code
 $ git clone https://github.com/app-generator/flask-dashboard-light-bootstrap.git
 $ cd flask-dashboard-light-bootstrap
 $
@@ -48,10 +49,13 @@ $ source env/bin/activate
 $
 $ # Virtualenv modules installation (Windows based systems)
 $ # virtualenv env
-$ # .\env\Scripts\activate.bat
-$ 
-$ # Install requirements
+$ # .\env\Scripts\activate
+$
+$ # Install modules - SQLite Database
 $ pip3 install -r requirements.txt
+$
+$ # OR with PostgreSQL connector
+$ # pip install -r requirements-pgsql.txt
 $
 $ # Set the FLASK_APP environment variable
 $ (Unix/Mac) export FLASK_APP=run.py
@@ -63,19 +67,135 @@ $ # (Unix/Mac) export FLASK_ENV=development
 $ # (Windows) set FLASK_ENV=development
 $ # (Powershell) $env:FLASK_ENV = "development"
 $
-$ # Run the application
+$ # Start the application (development mode)
 $ # --host=0.0.0.0 - expose the app on all network interfaces (default 127.0.0.1)
 $ # --port=5000    - specify the app port (default 5000)  
 $ flask run --host=0.0.0.0 --port=5000
 $
-$ # Access the app in browser: http://127.0.0.1:5000/
+$ # Access the dashboard in browser: http://127.0.0.1:5000/
+```
+
+> Note: To use the app, please access the registration page and create a new user. After authentication, the app will unlock the private pages.
+
+<br />
+
+## Code-base structure
+
+The project is coded using blueprints, app factory pattern, dual configuration profile (development and production) and an intuitive structure presented bellow:
+
+> Simplified version
+
+```bash
+< PROJECT ROOT >
+   |
+   |-- app/                      # Implements app logic
+   |    |-- base/                # Base Blueprint - handles the authentication
+   |    |-- home/                # Home Blueprint - serve UI Kit pages
+   |    |
+   |   __init__.py               # Initialize the app
+   |
+   |-- requirements.txt          # Development modules - SQLite storage
+   |-- requirements-mysql.txt    # Production modules  - Mysql DMBS
+   |-- requirements-pqsql.txt    # Production modules  - PostgreSql DMBS
+   |
+   |-- .env                      # Inject Configuration via Environment
+   |-- config.py                 # Set up the app
+   |-- run.py                    # Start the app - WSGI gateway
+   |
+   |-- ************************************************************************
+```
+
+<br />
+
+> The bootstrap flow
+
+- `run.py` loads the `.env` file
+- Initialize the app using the specified profile: *Debug* or *Production*
+  - If env.DEBUG is set to *True* the SQLite storage is used
+  - If env.DEBUG is set to *False* the specified DB driver is used (MySql, PostgreSQL)
+- Call the app factory method `create_app` defined in app/__init__.py
+- Redirect the guest users to Login page
+- Unlock the pages served by *home* blueprint for authenticated users
+
+<br />
+
+> App / Base Blueprint
+
+The *Base* blueprint handles the authentication (routes and forms) and assets management. The structure is presented below:
+
+```bash
+< PROJECT ROOT >
+   |
+   |-- app/
+   |    |-- home/                                # Home Blueprint - serve app pages (private area)
+   |    |-- base/                                # Base Blueprint - handles the authentication
+   |         |-- static/
+   |         |    |-- <css, JS, images>          # CSS files, Javascripts files
+   |         |
+   |         |-- templates/                      # Templates used to render pages
+   |              |
+   |              |-- includes/                  #
+   |              |    |-- navigation.html       # Top menu component
+   |              |    |-- sidebar.html          # Sidebar component
+   |              |    |-- footer.html           # App Footer
+   |              |    |-- scripts.html          # Scripts common to all pages
+   |              |
+   |              |-- layouts/                   # Master pages
+   |              |    |-- base-fullscreen.html  # Used by Authentication pages
+   |              |    |-- base.html             # Used by common pages
+   |              |
+   |              |-- accounts/                  # Authentication pages
+   |                   |-- login.html            # Login page
+   |                   |-- register.html         # Registration page
+   |
+   |-- requirements.txt                          # Development modules - SQLite storage
+   |-- requirements-mysql.txt                    # Production modules  - Mysql DMBS
+   |-- requirements-pqsql.txt                    # Production modules  - PostgreSql DMBS
+   |
+   |-- .env                                      # Inject Configuration via Environment
+   |-- config.py                                 # Set up the app
+   |-- run.py                                    # Start the app - WSGI gateway
+   |
+   |-- ************************************************************************
+```
+
+<br />
+
+> App / Home Blueprint
+
+The *Home* blueprint handles UI Kit pages for authenticated users. This is the private zone of the app - the structure is presented below:
+
+```bash
+< PROJECT ROOT >
+   |
+   |-- app/
+   |    |-- base/                     # Base Blueprint - handles the authentication
+   |    |-- home/                     # Home Blueprint - serve app pages (private area)
+   |         |
+   |         |-- templates/           # UI Kit Pages
+   |              |
+   |              |-- index.html      # Default page
+   |              |-- page-404.html   # Error 404 - mandatory page
+   |              |-- page-500.html   # Error 500 - mandatory page
+   |              |-- page-403.html   # Error 403 - mandatory page
+   |              |-- *.html          # All other HTML pages
+   |
+   |-- requirements.txt               # Development modules - SQLite storage
+   |-- requirements-mysql.txt         # Production modules  - Mysql DMBS
+   |-- requirements-pqsql.txt         # Production modules  - PostgreSql DMBS
+   |
+   |-- .env                           # Inject Configuration via Environment
+   |-- config.py                      # Set up the app
+   |-- run.py                         # Start the app - WSGI gateway
+   |
+   |-- ************************************************************************
 ```
 
 <br />
 
 ## Deployment
 
-The app is provided with a basic configuration to be executed in [Docker](https://www.docker.com/), [Gunicorn](https://gunicorn.org/), and [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/).
+The app is provided with a basic configuration to be executed in [Docker](https://www.docker.com/), [Heroku](https://www.heroku.com/), [Gunicorn](https://gunicorn.org/), and [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/).
 
 <br />
 
@@ -101,6 +221,41 @@ Visit `http://localhost:5005` in your browser. The app should be up & running.
 
 <br />
 
+### [Heroku](https://www.heroku.com/)
+---
+
+Steps to deploy on **Heroku**
+
+- [Create a FREE account](https://signup.heroku.com/) on Heroku platform
+- [Install the Heroku CLI](https://devcenter.heroku.com/articles/getting-started-with-python#set-up) that match your OS: Mac, Unix or Windows
+- Open a terminal window and authenticate via `heroku login` command
+- Clone the sources and push the project for LIVE deployment
+
+```bash
+$ # Clone the source code:
+$ git clone https://github.com/app-generator/flask-dashboard-light-bootstrap.git
+$ cd flask-dashboard-light-bootstrap
+$
+$ # Check Heroku CLI is installed
+$ heroku -v
+heroku/7.25.0 win32-x64 node-v12.13.0 # <-- All good
+$
+$ # Check Heroku CLI is installed
+$ heroku login
+$ # this commaond will open a browser window - click the login button (in browser)
+$
+$ # Create the Heroku project
+$ heroku create
+$
+$ # Trigger the LIVE deploy
+$ git push heroku master
+$
+$ # Open the LIVE app in browser
+$ heroku open
+```
+
+<br />
+
 ### [Gunicorn](https://gunicorn.org/)
 ---
 
@@ -119,7 +274,6 @@ Serving on http://localhost:8001
 ```
 
 Visit `http://localhost:8001` in your browser. The app should be up & running.
-
 
 <br />
 
@@ -146,25 +300,11 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 
 ## Credits & Links
 
-<br />
-
-### What is [Flask](https://www.palletsprojects.com/p/flask/)
-
-[Flask](https://www.palletsprojects.com/p/flask/) is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
-
-<br />
-
-### [What is a dashboard](https://en.wikipedia.org/wiki/Dashboard_(business))
-
-A dashboard is a set of pages that are easy to read and offer information to the user in real-time regarding his business. A dashboard usually consists of graphical representations of the current status and trends within an organization. Having a well-designed dashboard will give you the possibility to act and make informed decisions based on the data that your business provides - *definition provided by [Creative-Tim - Free Dashboard Templates](https://www.creative-tim.com/blog/web-design/free-dashboard-templates/?ref=appseed)*.
-
-<br />
-
-### [Light Dashboard](https://www.creative-tim.com/product/light-bootstrap-dashboard?ref=appseed)
-
-Light Bootstrap Dashboard is a Bootstrap4 admin dashboard template designed to be beautiful and simple. It is built on top of Bootstrap 4 and it is fully responsive. It comes with a big collection of elements that will offer you multiple possibilities to create the app that best fits your needs. It can be used to create admin panels, project management systems, web applications backend, CMS or CRM.
+- [Flask Framework](https://www.palletsprojects.com/p/flask/) - The offcial website
+- [Boilerplate Code](https://appseed.us/boilerplate-code) - Index provided by **AppSeed**
+- [Boilerplate Code](https://github.com/app-generator/boilerplate-code) - Index published on Github
 
 <br />
 
 ---
-[Flask Dashboard - Light Bootstrap Design](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Flask Dashboard - Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
