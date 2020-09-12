@@ -39,7 +39,7 @@
 
                                     <div class="col-md-5 px-1">
                                         <div class="form-group">
-                                            <input class="form-control" placeholder="Username" type="text" name="username" value="test">
+                                            {{ form.username(placeholder="Username", class="form-control") }}
                                         </div>
                                     </div>
 
@@ -54,7 +54,7 @@
 
                                     <div class="col-md-5 pl-1">
                                         <div class="form-group">
-                                            <input class="form-control" placeholder="Password" type="password" name="password" value="pass">
+                                            {{ form.password(placeholder="Password", class="form-control", type="password") }}
                                         </div>
                                     </div>
 
