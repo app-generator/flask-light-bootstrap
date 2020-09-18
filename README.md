@@ -1,22 +1,30 @@
-# [Flask Dashboard - Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
+# [Flask Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap)
 
-> Template [boilerplate code](https://appseed.us/boilerplate-code) used by [AppSeed](https://appseed.us) to generate simple admin dashboards coded in [Flask](https://palletsprojects.com/p/flask/) - Features:
+> Admin dashboard coded in **Flask** Framework with basic modules, database, ORM and deployment scripts. 
 
-- UI Kit: **Light Bootstrap** (Free Version) by **Creative-Tim**
+<br />
+
+**Light Bootstrap Dashboard** is Bootstrap 4 admin dashboard template designed to be beautiful and simple. It is built on top of Bootstrap 4 and it is fully responsive. It comes with a big colections of elements that will offer you multiple possibilities to create the app that best fits your needs. It can be used to create admin panels, project management systems, web applications backend, CMS or CRM.
+
+<br />
+
+**Codebase Features**
+
 - DBMS: SQLite, PostgreSQL (production) 
 - DB Tools: SQLAlchemy ORM, Alembic (schema migrations)
 - Modular design with **Blueprints**
 - Session-Based authentication (via **flask_login**), Forms validation
-- Deployment scripts: Docker, Gunicorn / Nginx, Heroku
+- Deployment scripts: Docker, Gunicorn/Nginx, HEROKU
 - Support via **Github** (issues tracker) and [Discord](https://discord.gg/fZC6hup).
+
+<br />
 
 > Links
 
-- [Flask Dashboard - Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Official product page
+- [Flask Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Official product page
 - [Flask Light Bootstrap Demo](https://flask-dashboard-light-bootstrap.appseed.us/) - LIVE app deployment
 - [Flask Light Bootstrap Docs](https://docs.appseed.us/admin-dashboards/flask-dashboard-light/) - Official documentation
-- More [Flask Admin Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **[AppSeed](https://appseed.us)**
-- [Open-Source Admin Dashboards](https://appseed.us/admin-dashboards/open-source) - index hosted by **[AppSeed](https://appseed.us)**
+- [Light Bootstrap Dashboard Design](https://demos.creative-tim.com/light-bootstrap-dashboard/documentation/tutorial-components.html) - Official documentation
 
 <br />
 
@@ -306,4 +314,4 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 <br />
 
 ---
-[Flask Dashboard - Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Flask Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
