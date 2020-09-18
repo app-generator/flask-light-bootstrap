@@ -13,7 +13,8 @@
 > Links
 
 - [Flask Dashboard - Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Official product page
-- [Flask Light Bootstrap Demo](https://flask-dashboard-light-bootstrap.appseed.us/) - LIVE App
+- [Flask Light Bootstrap Demo](https://flask-dashboard-light-bootstrap.appseed.us/) - LIVE app deployment
+- [Flask Light Bootstrap Docs](https://flask-dashboard-light-bootstrap.appseed.us/) - Official documentation
 - More [Flask Admin Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **[AppSeed](https://appseed.us)**
 - [Open-Source Admin Dashboards](https://appseed.us/admin-dashboards/open-source) - index hosted by **[AppSeed](https://appseed.us)**
 
