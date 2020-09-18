@@ -315,4 +315,4 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 <br />
 
 ---
-[Flask Dashboard - Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Flask Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
