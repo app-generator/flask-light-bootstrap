@@ -22,9 +22,8 @@
 > Links
 
 - [Flask Light Bootstrap](https://appseed.us/admin-dashboards/flask-dashboard-light-bootstrap) - Official product page
-- [Flask Light Bootstrap Demo](https://flask-dashboard-light-bootstrap.appseed.us/) - LIVE app deployment
-- [Flask Light Bootstrap Docs](https://docs.appseed.us/admin-dashboards/flask-dashboard-light/) - Official documentation
-- [Light Bootstrap Dashboard Design](https://demos.creative-tim.com/light-bootstrap-dashboard/documentation/tutorial-components.html) - Official documentation
+- [Flask Light Bootstrap - Demo](https://flask-dashboard-light-bootstrap.appseed.us/) - LIVE app deployment
+- [Flask Light Bootstrap - Docs](https://docs.appseed.us/admin-dashboards/flask-dashboard-light/) - Official documentation
 
 <br />
 
