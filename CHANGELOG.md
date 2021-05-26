@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.3] 2020-09-09
+### Improvements
+
+- Bump Codebase: [Flask Dashboard](https://github.com/app-generator/boilerplate-code-flask-dashboard) 1.0.6
+- UI Kit: Light Bootstrap Dashboard - v2.0.1
+- Bump UI: [Jinja Light Bootstrap](https://github.com/app-generator/jinja-light-bootstrap) 1.0.1
+
 ## [1.0.2] 2020-09-09
 ### Improvements
 
