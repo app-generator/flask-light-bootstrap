@@ -1,6 +1,6 @@
 # Change Log
 
-## [1.0.3] 2020-09-09
+## [1.0.3] 2021-05-26
 ### Improvements
 
 - Bump Codebase: [Flask Dashboard](https://github.com/app-generator/boilerplate-code-flask-dashboard) 1.0.6
