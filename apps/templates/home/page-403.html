@@ -1,0 +1,34 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} 403 Error {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">
+                                Error 403 - Access Denied.
+                            </h4>
+                            <br />
+                            <p>
+                                Please contact support or <a href="/login.html" class="btn btn-info btn-fill">Authenticate</a>. 
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
