@@ -33,7 +33,7 @@ $(document).ready(function() {
     lbd.checkSidebarImage();
 
     // Init navigation toggle for small screens
-    if (window_width <= 991) {
+    if (window_width <= 800) {
         lbd.initRightMenu();
     }
 
@@ -61,7 +61,11 @@ $(document).ready(function() {
 $(window).resize(function() {
     if ($(window).width() <= 991) {
         lbd.initRightMenu();
-    }
+    } 
+    if ($(window).width() >= 992) {
+        lbd.initRightMenu();
+    } 
+   
 });
 
 lbd = {

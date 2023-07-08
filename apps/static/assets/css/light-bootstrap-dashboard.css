@@ -384,17 +384,18 @@ body > .navbar-collapse {
   .sidebar[data-image]:after, .sidebar.has-image:after,
   body > .navbar-collapse[data-image]:after,
   body > .navbar-collapse.has-image:after {
-    opacity: .77; }
+    opacity: .86; }
   .sidebar[data-color="black"]:after,
   body > .navbar-collapse[data-color="black"]:after {
     background: #777777;
     background: linear-gradient(to bottom, #777777 0%, #777777 100%);
     background-size: 150% 150%; }
-  .sidebar[data-color="blue"]:after,
-  body > .navbar-collapse[data-color="blue"]:after {
-    background: #1F77D0;
-    background: linear-gradient(to bottom, #1F77D0 0%, #533ce1 100%);
-    background-size: 150% 150%; }
+    .sidebar[data-color="blue"]:after,
+    body > .navbar-collapse[data-color="blue"]:after {
+        background: #1F77D0;
+        background: linear-gradient(to bottom, #1fbbe8 0%, #15abd6 100%);
+        background-size: 150% 150%;
+    }
   .sidebar[data-color="azure"]:after,
   body > .navbar-collapse[data-color="azure"]:after {
     background: #1DC7EA;
@@ -1332,7 +1333,9 @@ body > .navbar-collapse {
 .navbar-transparent .navbar-brand, [class*="navbar-ct"] .navbar-brand {
   color: #FFFFFF;
   opacity: 0.9;
-  filter: alpha(opacity=90); }
+  filter: alpha(opacity=90); 
+  
+}
   .navbar-transparent .navbar-brand:focus, .navbar-transparent .navbar-brand:hover, [class*="navbar-ct"] .navbar-brand:focus, [class*="navbar-ct"] .navbar-brand:hover {
     background-color: transparent;
     opacity: 1;
@@ -2549,7 +2552,9 @@ Copyright (c) 2015 Daniel Eden
   .main-panel {
     width: 100%; }
   .navbar-brand {
-    padding: 15px 15px; }
+    padding: 15px 15px;
+    
+  }
   .navbar-transparent {
     padding-top: 15px;
     background-color: rgba(0, 0, 0, 0.45); }

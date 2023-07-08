@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Dashboard {% endblock %} 
+{% block title %} Register {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -15,76 +15,106 @@
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Register</h4>
-                            Add your credentials 
+                            <br />
+                            <p>
+                                {% if msg %}
+                                    {{ msg | safe }}
+                                {% else %}
+                                    Add your credentials
+                                {% endif %}
+                            </p>
                         </div>
 
-                        <br />
-                        <div class="card-body">
+                        {% if success %}
 
-                            <form method="" action="/">
-                                
-                                <div class="row">
-
-                                    <div class="col-md-1 px-1">
-                                        <div class="form-group">
-                                            <label>Username</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-5 px-1">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Username" value="">
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-md-1 px-1">
-                                        <div class="form-group">
-                                            <label>eMail</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-5 px-1">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Email" value="">
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-md-1 pl-1">
-                                        <div class="form-group">
-                                            <label>Password</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-5 pl-1">
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password" value="">
-                                        </div>
-                                    </div>
-
-                                </div>
+                            <div class="card-body">
 
                                 <div class="row">
                                     <div class="col-md-1 pl-1"></div>
-
                                     <div class="col-md-5 pl-1">
-                                        <button name="register" type="submit" class="btn btn-info btn-fill">Register</button>
+        
+                                        <a href="{{ url_for('authentication_blueprint.login') }}" 
+                                        class="btn btn-info btn-fill">Sign IN</a>
+                                    </div>
+                                </div>                        
+        
+                            </div>
 
-                                        &nbsp; &nbsp; Have an account? <a href="/login.html" >Login</a>
-                                        <div class="clearfix"></div>                                        
+                        {% else %}
+
+                            <div class="card-body">
+
+                                <form role="form" method="post" action="">
+
+                                    {{ form.hidden_tag() }} 
+                                    
+                                    <div class="row">
+
+                                        <div class="col-md-1 px-1">
+                                            <div class="form-group">
+                                                <label>Username</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-5 px-1">
+                                            <div class="form-group">
+                                                {{ form.username(placeholder="Username", class="form-control") }}
+                                            </div>
+                                        </div>
+
                                     </div>
 
-                                </div>
+                                    <div class="row">
 
-                            </form>
-                        </div>
+                                        <div class="col-md-1 px-1">
+                                            <div class="form-group">
+                                                <label>eMail</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-5 px-1">
+                                            <div class="form-group">
+                                                {{ form.email(placeholder="Email", class="input form-control", type="email") }}
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-md-1 pl-1">
+                                            <div class="form-group">
+                                                <label>Password</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-5 pl-1">
+                                            <div class="form-group">
+                                                {{ form.password(placeholder="Password", class="form-control", type="password") }}
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-1 pl-1"></div>
+
+                                        <div class="col-md-5 pl-1">
+                                            <button name="register" type="submit" class="btn btn-info btn-fill">Register</button>
+
+                                            &nbsp; &nbsp; Have an account? <a href="{{ url_for('authentication_blueprint.login') }}" >Login</a>
+                                            <div class="clearfix"></div>                                        
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        {% endif %}
+
+
+
                     </div>
                 </div>
 

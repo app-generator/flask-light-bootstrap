@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\apps",
+    "\\apps\\authentication",
+    "\\apps\\static",
+    "\\apps\\static\\assets",
+    "\\apps\\static\\assets\\css",
+    "\\apps\\templates",
+    "\\apps\\templates\\accounts",
+    "\\apps\\templates\\includes",
+    "\\apps\\templates\\layouts"
+  ],
+  "SelectedNode": "\\apps\\static\\assets\\js\\light-bootstrap-dashboard.js",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Dashboard {% endblock %} 
+{% block title %} Login {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -15,13 +15,20 @@
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Login</h4>
-                            Add your credentials
+                            <br />
+                            <p>
+                                {% if msg %}
+                                    {{ msg | safe }}
+                                {% else %}
+                                    Add your credentials
+                                {% endif %}
+                            </p>
                         </div>
-
-                        <br />
                         <div class="card-body">
 
-                            <form method="" action="/">
+                            <form role="form" method="post" action="">
+
+                                {{ form.hidden_tag() }}
 
                                 <div class="row">
 
@@ -33,7 +40,7 @@
 
                                     <div class="col-md-5 px-1">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Username" value="">
+                                            {{ form.username(placeholder="Username", class="form-control") }}
                                         </div>
                                     </div>
 
@@ -48,7 +55,7 @@
 
                                     <div class="col-md-5 pl-1">
                                         <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password" value="">
+                                            {{ form.password(placeholder="Password", class="form-control", type="password") }}
                                         </div>
                                     </div>
 
@@ -60,7 +67,7 @@
                                     <div class="col-md-5 pl-1">
                                         <button name="login" type="submit" class="btn btn-info btn-fill">Login</button>
 
-                                        &nbsp; &nbsp; Don't have an account? <a href="/register.html" >Register</a>
+                                        &nbsp; &nbsp; Don't have an account? <a href="{{ url_for('authentication_blueprint.register') }}" >Register</a>
                                         <div class="clearfix"></div>                                        
                                     </div>
 
