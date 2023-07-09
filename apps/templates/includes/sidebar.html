@@ -1,10 +1,14 @@
-<div class="sidebar" data-image="{{ config.ASSETS_ROOT }}/img/sidebar-7.jpg">
-       
-    <!--
-Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
-Tip 2: you can also add an image using data-image tag
--->
+
+
+
+<div class="sidebar" id="sidebar" data-image="{{ config.ASSETS_ROOT }}/img/sidebar-7.jpg" data-color=blue>
+
+    <!--
+    Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+
+    Tip 2: you can also add an image using data-image tag
+    -->
     <div class="sidebar-wrapper">
         <div class="logo">
             <a href="/" class="simple-text">
@@ -12,39 +16,42 @@ Tip 2: you can also add an image using data-image tag
             </a>
         </div>
         <ul class="nav">
-            
-            <li class="nav-item nav-item {% if 'index' in segment %} active {% endif %}">
-                <a class="nav-link" href="/">
-                    <i class="nc-icon nc-chart-pie-35"></i>
-                    <p>Dashboard</p>
-                </a>
-            </li>
-         
             <li class="nav-item nav-item {% if 'table' in segment %} active {% endif %}">
                 <a class="nav-link" href="/table.html">
                     <i class="nc-icon nc-notes"></i>
-                    <p>Table List</p>
+                    <p>Explore</p>
                 </a>
             </li>
-           
+            <li class="nav-item nav-item {% if 'index' in segment %} active {% endif %}">
+                <a class="nav-link" href="/">
+                    <i class="nc-icon nc-chart-pie-35"></i>
+                    <p>user Data page</p>
+                </a>
+            </li>
+
+
+
             <li class="nav-item nav-item {% if 'icons' in segment %} active {% endif %}">
                 <a class="nav-link" href="/icons.html">
                     <i class="nc-icon nc-atom"></i>
                     <p>Icons</p>
                 </a>
             </li>
-           
-            
+
+
             <li class="nav-item active active-pro">
-                <a class="nav-link active" target="_blank" 
+                <a class="nav-link active" target="_blank"
                    href="https://appseed.us/support/">
                     <i class="nc-icon nc-spaceship"></i>
                     <p>Support</p>
                 </a>
             </li>
-         
-         
-         
+
+
+
         </ul>
     </div>
 </div>
+<button class="sidebar-toggle" id="sidebar-toggle">
+    <i class="fa fa-bars"></i>
+</button>

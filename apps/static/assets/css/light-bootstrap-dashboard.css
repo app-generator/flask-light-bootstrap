@@ -27,6 +27,8 @@ button.close {
   font-family: "Roboto","Helvetica Neue",Arial,sans-serif;
   font-weight: 400; }
 
+
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-weight: 300;
   margin: 30px 0 15px; }
@@ -393,7 +395,7 @@ body > .navbar-collapse {
     .sidebar[data-color="blue"]:after,
     body > .navbar-collapse[data-color="blue"]:after {
         background: #1F77D0;
-        background: linear-gradient(to bottom, #1fbbe8 0%, #15abd6 100%);
+        background: linear-gradient(to bottom, #4FB9F4 0%, #1FA5F1 100%);
         background-size: 150% 150%;
     }
   .sidebar[data-color="azure"]:after,

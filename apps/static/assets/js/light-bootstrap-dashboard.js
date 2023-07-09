@@ -26,6 +26,7 @@ var mobile_menu_visible = 0,
     $sidebar,
     isWindows;
 
+
 $(document).ready(function() {
     window_width = $(window).width();
 
@@ -33,7 +34,7 @@ $(document).ready(function() {
     lbd.checkSidebarImage();
 
     // Init navigation toggle for small screens
-    if (window_width <= 800) {
+    if (window_width <= 991) {
         lbd.initRightMenu();
     }
 
@@ -206,3 +207,6 @@ function debounce(func, wait, immediate) {
         if (immediate && !timeout) func.apply(context, args);
     };
 };
+
+
+
