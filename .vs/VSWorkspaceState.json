@@ -3,14 +3,14 @@
     "",
     "\\apps",
     "\\apps\\authentication",
+    "\\apps\\home",
     "\\apps\\static",
     "\\apps\\static\\assets",
-    "\\apps\\static\\assets\\css",
+    "\\apps\\static\\assets\\sass",
     "\\apps\\templates",
     "\\apps\\templates\\accounts",
-    "\\apps\\templates\\includes",
-    "\\apps\\templates\\layouts"
+    "\\apps\\templates\\home"
   ],
-  "SelectedNode": "\\apps\\static\\assets\\js\\light-bootstrap-dashboard.js",
+  "SelectedNode": "\\apps\\templates\\home",
   "PreviewInSolutionExplorer": false
 }
