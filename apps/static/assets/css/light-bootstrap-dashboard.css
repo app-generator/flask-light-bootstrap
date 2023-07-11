@@ -3353,12 +3353,42 @@ License - nucleoapp.com/license/
  * Base structure
  */
 
-body {
-    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-}
 
 .cover-container {
-    max-width: 42em;
+    max-width: 60em;
+    padding-top: 15px;
+    
 }
 
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+
+icons {
+    max-width: 5%;
+    height: auto;
+}
+
+.b-example-divider {
+    height: 0.15rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    border-radius: 3rem;
+}
+
+@media (min-width: 992px) {
+    .rounded-lg-3 {
+        border-radius: .3rem;
+    }
+}
+
+.my-5 {
+    
+    line-height: 1.2;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+    background-color: white;
+}       
