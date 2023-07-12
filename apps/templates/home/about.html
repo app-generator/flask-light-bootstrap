@@ -6,20 +6,56 @@
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
+<div class="cover-container d-flex w-100 h-flex p-3 mx-auto flex-column">
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="https://picsum.photos/200/300?grayscale" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"  loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">About Us</h1>
+                <p class="lead">Located in the heart of Michigan, our company is driven by a passion for data and a commitment to delivering exceptional web analytics solutions. With a team of skilled professionals, we specialize in harnessing the power of scraping diverse sources, including social media and news platforms, to provide our clients with comprehensive insights and actionable intelligence. Our mission is to empower businesses with the knowledge they need to make informed decisions and thrive in the digital landscape.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
 
-<!-- html goes here -->
-{% endblock content %}
-<!-- Specific Page JS goes HERE  -->
-{% block javascripts %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4">
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
+            <img class="icon-small" id="data-discovery" src="{{ config.ASSETS_ROOT }}/img/location.ico">
 
-        demo.showNotification();
+            <h2>Located</h2>
+            <p>Found and located in Lapeer County Michigan.</p>
+          
+            </div?>
+            <!-- /.col-lg-4 -->
+        </div>
+        <div class="col-lg-4">
 
-    });
-</script>
+            <img class="icon-small" id="data-discovery" src="{{ config.ASSETS_ROOT }}/img/envelope.ico">
+            <h2>Contact</h2>
+            <p>Email: weblytics@gmail.com </p>
+         
 
-{% endblock javascripts %}
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+</div>
+    <!-- html goes here -->
+    {% endblock content %}
+    <!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Javascript method's body can be found in assets/js/demos.js
+            demo.initDashboardPageCharts();
+
+            demo.showNotification();
+
+        });
+    </script>
+
+    {% endblock javascripts %}

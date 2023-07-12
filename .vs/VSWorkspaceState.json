@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\apps",
-    "\\apps\\authentication",
-    "\\apps\\home",
     "\\apps\\static",
     "\\apps\\static\\assets",
-    "\\apps\\static\\assets\\sass",
+    "\\apps\\static\\assets\\fonts",
+    "\\apps\\static\\assets\\img",
     "\\apps\\templates",
-    "\\apps\\templates\\accounts",
-    "\\apps\\templates\\home"
+    "\\apps\\templates\\home",
+    "\\apps\\templates\\layouts",
+    "\\media"
   ],
-  "SelectedNode": "\\apps\\templates\\home",
+  "SelectedNode": "\\run.py",
   "PreviewInSolutionExplorer": false
 }

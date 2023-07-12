@@ -3355,7 +3355,7 @@ License - nucleoapp.com/license/
 
 
 .cover-container {
-    max-width: 60em;
+    max-width: 68em;
     padding-top: 15px;
     
 }
@@ -3391,4 +3391,24 @@ icons {
     line-height: 1.2;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
     background-color: white;
-}       
+}
+
+.circle {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  
+    border: 2px solid #666;
+    margin: 0 auto;
+   
+    background-color: #bbb;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+}
+
+icon-small{
+    width: 25%;
+    height: auto;
+
+}
