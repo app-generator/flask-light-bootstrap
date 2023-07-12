@@ -1728,7 +1728,7 @@ Copyright (c) 2015 Daniel Eden
 .card {
   border-radius: 4px;
   background-color: #FFFFFF;
-  margin-bottom: 30px; }
+   }
   .card .card-image {
     width: 100%;
     overflow: hidden;
@@ -3412,3 +3412,58 @@ icon-small{
     height: auto;
 
 }
+.column   {
+   
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-bottom: 15px;
+}
+.row-bott {
+    margin-top:3px;
+    text-align: right;
+    margin-bottom: 30px;
+    
+}
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48
+}
+
+.subscribe-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe-prompt {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subscribe-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+    .subscribe-input::placeholder {
+        color: #999;
+    }
+
+.subscribe-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .subscribe-button:hover {
+        background-color: #0056b3;
+    }

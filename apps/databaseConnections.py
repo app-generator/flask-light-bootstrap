@@ -37,6 +37,8 @@ def start_stop_connections(dbAction, variable):
     conn = sqlite3.connect('db.sqlite3')
     cursor = conn.cursor()
 
+    ##
+     
     dbAction(variable)
     # Closing the connection
     conn.close()
@@ -58,3 +60,28 @@ for row in rows:
     print("Email:", row[2])
     print()
 
+
+app = Flask(__name__)
+
+# SQLite database connection
+conn = sqlite3.connect('your_database.db')
+cursor = conn.cursor()
+
+#inserting data into the emailFreeSubscribers table
+@app.route('/', methods=['GET', 'POST'])
+def subscribe():
+    if request.method == 'POST':
+        email = request.form['email']
+
+        # Insert email into the SQLite database
+        cursor.execute("INSERT INTO Subscribers (email) VALUES (?)", (email,))
+        conn.commit()
+
+        # You can add additional logic here, such as sending a confirmation email
+
+        return "Thank you for subscribing!"
+
+    return render_template('index.html')
+
+if __name__ == '__main__': 
+   app.run(debug=True)

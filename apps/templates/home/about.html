@@ -4,7 +4,11 @@
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
-
+<style>
+    .container{
+    margin-top: 100px;
+    }
+</style>
 {% block content %}
 <div class="cover-container d-flex w-100 h-flex p-3 mx-auto flex-column">
     <div class="container col-xxl-8 px-4 py-5">
@@ -33,7 +37,7 @@
             </div?>
             <!-- /.col-lg-4 -->
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4" >
 
             <img class="icon-small" id="data-discovery" src="{{ config.ASSETS_ROOT }}/img/envelope.ico">
             <h2>Contact</h2>

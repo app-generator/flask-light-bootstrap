@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\apps",
+    "\\apps\\authentication",
     "\\apps\\static",
     "\\apps\\static\\assets",
-    "\\apps\\static\\assets\\fonts",
-    "\\apps\\static\\assets\\img",
+    "\\apps\\static\\assets\\css",
     "\\apps\\templates",
     "\\apps\\templates\\home",
     "\\apps\\templates\\layouts",
