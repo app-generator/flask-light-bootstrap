@@ -429,7 +429,9 @@ body > .navbar-collapse {
   position: relative;
   float: right;
   width: calc(100% - 260px);
-  min-height: 100%; }
+  min-height: 100%;
+  
+}
   .main-panel > .content {
     padding: 30px 15px;
     min-height: calc(100% - 123px); }
@@ -2561,7 +2563,10 @@ Copyright (c) 2015 Daniel Eden
     padding-top: 15px;
     background-color: rgba(0, 0, 0, 0.45); }
   body {
-    position: relative; }
+    position: relative; 
+   
+  }
+  height: 100%;
   .wrapper {
     left: 0;
     background-color: white; }
@@ -3467,3 +3472,53 @@ icon-small{
     .subscribe-button:hover {
         background-color: #0056b3;
     }
+
+    .hero-container{
+        height: 100%;
+    }
+
+.form-container {
+    max-width: 400px;
+    margin: 85px auto 85px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: auto;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .form-container button:hover {
+        background-color: #0056b3;
+    }
+

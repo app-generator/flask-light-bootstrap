@@ -6,25 +6,26 @@
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
-div
+
 <div class="subscribe-container">
-    <p class="subscribe-prompt">Subscribe to weblytics news and alerts:</p>
+    <p class="subscribe-prompt">Subscribe to Weblytics for free news updates and important alerts:</p>
     <input class="subscribe-input" type="email" name="email" placeholder="Enter your email address" required>
     <button class="subscribe-button" type="submit">Subscribe</button>
 </div>
 
-<div class="px-4 pt-5 my-5 text-center border-bottom">
-    <h1 class="display-4 fw-bold">Centered screenshot</h1>
-    <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+<div class="hero-container px-4 pt-5 my-5 text-center border-bottom" >
+    <h1 class="display-4 fw-bold">Experience Data Mastery with Premium!</h1>
+    <div class="col-lg-8 mx-auto">
+        <p class="lead mb-4">Unlock Limitless Insights with Our Premium Subscription! Elevate your data-driven decision-making with exclusive features such as personalized emailed updates on the analytics that matter most to you, the ability to stay ahead of trends by favoriting hot topics, and harness the power of Predictive Analytics, Customized Reporting, Advanced Data Visualization, and Data Export and Integration. Plus, stay tuned for even more exciting features coming your way in the future. Upgrade now and revolutionize the way you leverage data!</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
-            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+            <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">View Pricing</button>
+            
         </div>
     </div>
-    <div class="overflow-hidden" style="max-height: 30vh;">
+    <div class="overflow-hidden" style="max-height: 40vh;">
         <div class="container px-5">
-            <img src="bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+            <img src="{{ config.ASSETS_ROOT }}/img/techn.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+           
         </div>
     </div>
 </div>
