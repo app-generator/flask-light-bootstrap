@@ -14,8 +14,8 @@ class Config(object):
     SECRET_KEY = os.getenv('SECRET_KEY', 'red@#reap4rz191_$')
 
     # This will create a file in <app> FOLDER
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite3')
-    SQLALCHEMY_TRACK_MODIFICATIONS = False 
+    #SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite3')
+    #SQLALCHEMY_TRACK_MODIFICATIONS = False 
 
     # Assets Management
     ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets')    
