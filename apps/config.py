@@ -10,7 +10,7 @@ class Config(object):
     basedir = os.path.abspath(os.path.dirname(__file__))
 
     # Set up the App SECRET_KEY
-    # SECRET_KEY = config('SECRET_KEY'  , default='S#perS3crEt_007')
+    #SECRET_KEY = config('SECRET_KEY'  , default='S#perS3crEt_007')
     SECRET_KEY = os.getenv('SECRET_KEY', 'red@#reap4rz191_$')
 
     # This will create a file in <app> FOLDER
@@ -28,18 +28,9 @@ class ProductionConfig(Config):
     REMEMBER_COOKIE_HTTPONLY = True
     REMEMBER_COOKIE_DURATION = 3600
 
-    # PostgreSQL database
-    SQLALCHEMY_DATABASE_URI = '{}://{}:{}@{}:{}/{}'.format(
-        os.getenv('DB_ENGINE'   , 'sqlite'),
-        os.getenv('DB_USERNAME' , 'adminTweet'),
-        os.getenv('DB_PASS'     , 'greenBallz'),
-        os.getenv('DB_HOST'     , 'localhost'),
-        os.getenv('DB_PORT'     , 3306),
-        os.getenv('DB_NAME'     , 'appseed_db')
-    ) 
 
 class DebugConfig(Config):
-    DEBUG = True
+    DEBUG = False
 
 
 # Load all possible configurations

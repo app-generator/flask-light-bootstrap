@@ -16,7 +16,8 @@ DEBUG = (os.getenv('DEBUG', 'False') == 'True')
 
 
 # The configuration
-get_config_mode = 'Debug' if DEBUG else 'Production'
+#get_config_mode = 'Debug' if DEBUG else 'Production'
+get_config_mode = 'Production'
 
 try:
 
