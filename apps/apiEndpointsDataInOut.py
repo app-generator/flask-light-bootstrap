@@ -56,12 +56,4 @@ def get_topic_counts():
 if __name__ == '__main__':
     app.run()
 
-     # PostgreSQL database
-    SQLALCHEMY_DATABASE_URI = '{}://{}:{}@{}:{}/{}'.format(
-        os.getenv('DB_ENGINE'   , 'sqlite'),
-        os.getenv('DB_USERNAME' , 'adminTweet'),
-        os.getenv('DB_PASS'     , 'greenBallz'),
-        os.getenv('DB_HOST'     , 'localhost'),
-        os.getenv('DB_PORT'     , 3306),
-        os.getenv('DB_NAME'     , 'appseed_db')
-    ) 
+ 

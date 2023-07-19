@@ -14,8 +14,8 @@ login_manager = LoginManager()
 
 
 def register_extensions(app):
-    #db.init_app(app)
-    #login_manager.init_app(app)
+    db.init_app(app)
+    login_manager.init_app(app)
 
 
 def register_blueprints(app):
@@ -28,8 +28,8 @@ def configure_database(app):
 
     
     
-    #with app.app_context():
-        #db.create_all()
+    with app.app_context():
+        db.create_all()
 
     
     def shutdown_session(exception=None):
