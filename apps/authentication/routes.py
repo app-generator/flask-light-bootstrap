@@ -20,7 +20,8 @@ from apps.authentication.util import verify_pass
 
 @blueprint.route('/')
 def route_default():
-    return redirect(url_for('authentication_blueprint.login'))
+   # return redirect(url_for('authentication_blueprint.login'))
+   return redirect(url_for('home_blueprint.index'))
 
 
 # Login & Registration
@@ -48,10 +49,10 @@ def login():
                                msg='Wrong user or password',
                                form=login_form)
 
-    if not current_user.is_authenticated:
-        return render_template('accounts/login.html',
-                               form=login_form)
-    return redirect(url_for('home_blueprint.index'))
+    #if not current_user.is_authenticated:
+    #    return render_template('accounts/login.html',
+    #                           form=login_form)
+    #return redirect(url_for('home_blueprint.index'))
 
 
 @blueprint.route('/register', methods=['GET', 'POST'])
