@@ -5,11 +5,11 @@
     "\\apps\\authentication",
     "\\apps\\static",
     "\\apps\\static\\assets",
-    "\\apps\\static\\assets\\img",
+    "\\apps\\static\\assets\\js",
     "\\apps\\templates",
-    "\\apps\\templates\\home",
     "\\apps\\templates\\layouts",
-    "\\media"
+    "\\media",
+    "\\nginx"
   ],
   "SelectedNode": "\\run.py",
   "PreviewInSolutionExplorer": false

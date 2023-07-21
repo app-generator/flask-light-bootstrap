@@ -5,18 +5,21 @@ Copyright (c) 2019 - present AppSeed.us
 
 from flask_login import UserMixin
 
-from apps import db, login_manager
+from apps import  login_manager, init_Db, dbPerform, dbActionRetreiveUser
 
 from apps.authentication.util import hash_pass
 
-class Users(db.Model, UserMixin):
+class Users( UserMixin):
 
+    
     __tablename__ = 'Users'
+   
 
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(64), unique=True)
+    user = db.Column(db.String(64), unique=True)
     email = db.Column(db.String(64), unique=True)
     password = db.Column(db.LargeBinary)
+    
 
     def __init__(self, **kwargs):
         for property, value in kwargs.items():

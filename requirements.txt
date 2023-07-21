@@ -11,7 +11,6 @@ Flask-Login
 Flask-Migrate
 Flask-Minify
 flask-restx
-Flask-SQLAlchemy
 Flask-WTF
 greenlet
 gunicorn
@@ -34,7 +33,6 @@ referencing
 rpds-py
 setuptools
 six
-SQLAlchemy
 typing_extensions
 Werkzeug
 WTForms
