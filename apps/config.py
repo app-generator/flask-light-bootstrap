@@ -3,7 +3,7 @@
 Copyright (c) 2019 - present AppSeed.us
 """
 
-from flask_sqlalchemy import SQLAlchemy
+
 from dotenv import load_dotenv
 import os
 
@@ -26,7 +26,7 @@ class Config(object):
     print(os.environ.get('DB_NAME'))
 
     # Set up the App SECRET_KEY
-    SECRET_KEY = os.getenv('SECRET_KEY', os.getenv('SECRET_KEY'))
+    SECRET_KEY = os.getenv('SECRET_KEY')
     # outside docker
     #SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}/{os.getenv('DB_NAME')}"
     #inside docker
