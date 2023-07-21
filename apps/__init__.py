@@ -11,12 +11,12 @@ from flask_login import LoginManager
 import pymysql
 from importlib import import_module
 from dotenv import load_dotenv
-from apps import config_db 
-import os
+
+
 
  # Get the current directory
 
-
+login_manager = LoginManager()
 
 def register_extensions(app):
     

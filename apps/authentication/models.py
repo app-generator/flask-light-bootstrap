@@ -8,27 +8,21 @@ from flask_login import UserMixin
 from dbModels import  login_manager, dbPerform, dbActionRetreiveUser
 
 from apps.authentication.util import hash_pass
+import os
 
 
 
 class Users( UserMixin):
-    def __init__(self, user, email, password):
-          self.user = user
-          self.email = email
-          self.password = password
 
-class Users( UserMixin):
+    def __init__(self, user, email, password, activePremium, billingDate):
+        self.id = id
+        self.user = user
+        self.email = email
+        self.password = password
+        self.activePremium = activePremium
+        self.billingDate = billingDate
 
-    
-    __tablename__ = 'Users'
-   
-
-    id = db.Column(db.Integer, primary_key=True)
-    user = db.Column(db.String(64), unique=True)
-    email = db.Column(db.String(64), unique=True)
-    password = db.Column(db.LargeBinary)
-    
-    def hash_pass():
+    def hash_pass( **kwargs):
 
         for property, value in kwargs.items():
             # depending on whether value is an iterable or not, we must
@@ -46,8 +40,12 @@ class Users( UserMixin):
         def __repr__(self):
           return str(self.username)
     
-        def __init__(self, **kwargs):
-      
+    def saveToDB():
+         dbPerform(dbActionRetreiveUser('users',self.name, self.password, self.email, self.billingDate, self.activePremium), False)
+
+    def getUserbyEmail():
+        dbData = dbPerform(dbActionRetreiveUser(self.email))
+
         
 
 
