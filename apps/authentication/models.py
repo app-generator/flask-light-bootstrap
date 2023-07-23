@@ -4,8 +4,7 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 from flask_login import UserMixin
-
-from apps import  login_manager
+from apps import login_manager
 from apps.dbModels import dbPerform, dbActionRetreiveUser
 from apps.authentication.util import hash_pass
 import os
@@ -15,7 +14,7 @@ import os
 class Users( UserMixin):
 
     def __init__(self, user, email, password, activePremium, billingDate):
-        self.id = id
+        self.uid = uid
         self.user = user
         self.email = email
         self.password = password
@@ -40,13 +39,34 @@ class Users( UserMixin):
         
     
     def saveToDB():
-         dbPerform(dbActionRetreiveUser('users',self.name, self.password, self.email, self.billingDate, self.activePremium), False)
+         dbPerform(dbActionRetreiveUser('users', name, password, email, billingDate, activePremium), False)
 
     def getUserbyEmail():
-        dbData = dbPerform(dbActionRetreiveUser(self.email))
+        user = dbPerform(dbActionRetreiveUser(email), True)
+        return user
 
     def __repr__(self):
-          return str(self.username)
+          return str(username)
 
         
 
+@login_manager.user_loader
+def user_loader(uid):
+    user = request.form.get('uid')
+    if id:
+        user = dbPerform(dbActionRetreiveUser(uid), true)
+        return user if user else None
+    return  none
+
+
+@login_manager.request_loader
+def request_loader(request):
+    
+    username = request.form.get('username')
+    print(" request made")
+    
+    if username:
+        print("user requested")
+        user = dbPerform(dbActionRetreiveUser(username), True)
+        return user if user else None
+    return None

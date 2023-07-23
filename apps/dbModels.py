@@ -1,15 +1,19 @@
-
+import os
+from dotenv import load_dotenv
+import pymysql
 
 def init_Db():
     # Get the parent directory
+    current_directory = os.path.dirname(os.path.abspath(__file__))
     parent_directory = os.path.dirname(current_directory)
     envPath = parent_directory + '\.env'
     load_dotenv(envPath)
+    print(os.environ.get('DB_USER'))
     dbCon = pymysql.connect(
             user=os.environ.get('DB_USER'),
             password=os.environ.get('DB_PASSWORD'),
             host=os.environ.get('IP_ADDRESS'),
-            database=os.environ.get('DB_DATABASE')
+            database=os.environ.get('DB_NAME')
      )
     
     # Connect to the database
@@ -18,8 +22,8 @@ def init_Db():
     return dbCon, cursor
 
 
-def dbPerform(dbCon, cursor, action, inboundBool ):
-    init_Db()
+def dbPerform( action, isInboundBool ):
+    dbCon, cursor = init_Db()
     try:
         if inboundBool: 
          # Execute the create table queries
@@ -44,48 +48,8 @@ def dbPerform(dbCon, cursor, action, inboundBool ):
 
 
     
-def dbActionCreateTable():
-    # SQL queries to create the necessary tables
-    # Adjust the queries according to your application's schema
-    create_table_query = """
-        CREATE TABLE IF NOT EXISTS users (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            username VARCHAR(20) NOT NULL,
-            password VARCHAR(30) NOT NULL,
-            email VARCHAR(40) NOT NULL, 
-            activePremium BOOL,
-            BillingDate DATE
 
-        );
-        
-        CREATE TABLE IF NOT EXISTS newsArticles (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            category	TEXT,
-            date	DATETIME,
-            title	TEXT,
-            topic	TEXT,
-             content	TEXT,
-            sentiment	DECIMAL,
-            likes	INTEGER,
-            comments	INTEGER,
-            shares	INTEGER,
-            keywords	TEXT,
-            hashtags	TEXT,
-            source_url	TEXT,
-            tags	TEXT,
-            ctr	REAL,
-            spent	INTEGER,
-            bounce_rate	REAL,
-            location_name	TEXT
-        );
-          
-       
-       
-    """
-    return create_table_query
-    print('succ')
-
-def dbActionInsertUser(tableName, db, name, password, email, billingDate, isPremium ):
+def dbActionInsertUser( name, password, email, billingDate, isPremium ):
     insertData = """ 
             
             INSERT INTO Customers (username, password, email, billingDate, activePremium,);
@@ -94,13 +58,13 @@ def dbActionInsertUser(tableName, db, name, password, email, billingDate, isPrem
     """.format( name, password, email, billingDate, isPremium )
     return insertData
 
-def dbActionRetreiveUser(tableName, db, name, password, email, billingDate, isPremium ):
+def dbActionRetreiveUser( name, password, billingDate, isPremium ):
     data = """ 
             
             SELECT  FROM users 
-            VALUES ('{}','{}','{}','{}','{}');
+            VALUES ('{}','{}','{}','{}');
 
-    """.format( name, password, email, billingDate, isPremium )
+    """.format( name, password, billingDate, isPremium )
     return data
 
 def dbActionReturnNews():

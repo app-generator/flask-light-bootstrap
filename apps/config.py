@@ -20,19 +20,13 @@ class Config(object):
     load_dotenv(envPath)
   
 
-    print(os.environ.get('DB_USER')) 
-    print(os.environ.get('DB_PASSWORD'))
-    print(os.environ.get('DB_HOST'))
-    print(os.environ.get('DB_NAME'))
-
     # Set up the App SECRET_KEY
     SECRET_KEY = os.getenv('SECRET_KEY')
     # outside docker
     #SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}/{os.getenv('DB_NAME')}"
     #inside docker
-
     SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('IP_ADDRESS')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
-    print(os.getenv('IP_ADDRESS'))
+    print(SQLALCHEMY_DATABASE_URI)
     SQLALCHEMY_TRACK_MODIFICATIONS = False 
     
 

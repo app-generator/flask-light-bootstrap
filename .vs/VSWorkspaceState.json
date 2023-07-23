@@ -3,11 +3,7 @@
     "",
     "\\apps",
     "\\apps\\authentication",
-    "\\apps\\static",
-    "\\apps\\static\\assets",
-    "\\apps\\static\\assets\\js",
-    "\\apps\\templates",
-    "\\apps\\templates\\layouts",
+    "\\apps\\home",
     "\\media",
     "\\nginx"
   ],
