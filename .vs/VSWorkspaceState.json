@@ -3,10 +3,14 @@
     "",
     "\\apps",
     "\\apps\\authentication",
-    "\\apps\\home",
+    "\\apps\\static",
+    "\\apps\\static\\assets",
+    "\\apps\\static\\assets\\js",
+    "\\apps\\static\\assets\\js\\plugins",
+    "\\apps\\templates",
     "\\media",
     "\\nginx"
   ],
-  "SelectedNode": "\\run.py",
+  "SelectedNode": "\\apps\\authentication\\models.py",
   "PreviewInSolutionExplorer": false
 }

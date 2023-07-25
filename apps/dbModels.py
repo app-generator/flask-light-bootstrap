@@ -8,7 +8,7 @@ def init_Db():
     parent_directory = os.path.dirname(current_directory)
     envPath = parent_directory + '\.env'
     load_dotenv(envPath)
-    print(os.environ.get('DB_USER'))
+    
     dbCon = pymysql.connect(
             user=os.environ.get('DB_USER'),
             password=os.environ.get('DB_PASSWORD'),

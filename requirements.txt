@@ -27,6 +27,7 @@ MarkupSafe
 pip
 ply
 python-dotenv
+pymysql
 pytz
 rcssmin
 referencing
@@ -37,4 +38,4 @@ typing_extensions
 Werkzeug
 WTForms
 xxhash
-# flask_mysqldb
+

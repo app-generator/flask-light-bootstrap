@@ -6,23 +6,25 @@ services:
     env_file: .env
     build: .
     networks:
-      - db_network
-      - web_network
+      - mysqlnet
+      - webCon
   nginx:
     container_name: nginx
     restart: always
     image: "nginx:latest"
     ports:
-      - "5085:5085"
+      - "5005:5005"
     volumes:
-      - ./nginx:/etc/nginx/conf.d
+      - ./nginx:/etc/nginx/appseed_app.conf
     networks:
-      - web_network
+      - mysqlnet
+      - webCon
     depends_on: 
       - appseed-app
+    
 networks:
-  db_network:
+  mysqlnet:
     driver: bridge
-  web_network:
+  webCon:
     driver: bridge
  

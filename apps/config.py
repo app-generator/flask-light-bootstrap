@@ -25,9 +25,8 @@ class Config(object):
     # outside docker
     #SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}/{os.getenv('DB_NAME')}"
     #inside docker
-    SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('IP_ADDRESS')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
-    print(SQLALCHEMY_DATABASE_URI)
-    SQLALCHEMY_TRACK_MODIFICATIONS = False 
+    DATABASE_URI = f"mysql+pymysql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('IP_ADDRESS')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
+    
     
 
     # Assets Management
@@ -44,10 +43,10 @@ class ProductionConfig(Config):
      # PostgreSQL database
     SQLALCHEMY_DATABASE_URI = '{}://{}:{}@{}:{}/{}'.format(
         os.getenv('DB_ENGINE'  ),
-        os.getenv('DB_USERNAME'),
-        os.getenv('DB_PASS'    ),
+        os.getenv('DB_USER'),
+        os.getenv('DB_PASSWORD'    ),
         os.getenv('DB_HOST'     ),
-        os.getenv('DB_PORT'   ),
+        os.getenv('IP_ADDRESS'   ),
         os.getenv('DB_NAME'    )
         )
 
