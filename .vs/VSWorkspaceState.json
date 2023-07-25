@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\apps",
+    "\\apps\\authentication",
+    "\\apps\\static",
+    "\\apps\\static\\assets",
+    "\\apps\\static\\assets\\js",
+    "\\apps\\static\\assets\\js\\plugins",
+    "\\apps\\templates",
+    "\\media",
+    "\\nginx"
+  ],
+  "SelectedNode": "\\apps\\authentication\\models.py",
+  "PreviewInSolutionExplorer": false
+}

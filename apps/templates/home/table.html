@@ -7,140 +7,342 @@
 
 {% block content %}
 
-    <div class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card strpied-tabled-with-hover">
-                        <div class="card-header ">
-                            <h4 class="card-title">Striped Table with Hover</h4>
-                            <p class="card-category">Here is a subtitle for this table</p>
-                        </div>
-                        <div class="card-body table-full-width table-responsive">
-                            <table class="table table-hover table-striped">
-                                <thead>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Salary</th>
-                                    <th>Country</th>
-                                    <th>City</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>$36,738</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Minerva Hooper</td>
-                                        <td>$23,789</td>
-                                        <td>Curaçao</td>
-                                        <td>Sinaai-Waas</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Sage Rodriguez</td>
-                                        <td>$56,142</td>
-                                        <td>Netherlands</td>
-                                        <td>Baileux</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Philip Chaney</td>
-                                        <td>$38,735</td>
-                                        <td>Korea, South</td>
-                                        <td>Overland Park</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Doris Greene</td>
-                                        <td>$63,542</td>
-                                        <td>Malawi</td>
-                                        <td>Feldkirchen in Kärnten</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Mason Porter</td>
-                                        <td>$78,615</td>
-                                        <td>Chile</td>
-                                        <td>Gloucester</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<div class="content">
+
+    <div class="row d-flex g-2 p-2  txt-algn-center">
+
+        <div class="dropdown">
+            <button class="dropbtn">Categories</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Date</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <div class="column">
+            <div class="col-md-12">
+                <div class="card strpied-tabled-with-hover">
+                    <div class="card-header ">
+                        <h4 class="card-title">Positive</h4>
+                        <p class="card-category">Here is a subtitle for this table</p>
+                    </div>
+                    <div class="card-body table-full-width table-responsive">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Salary</th>
+                            <th>Country</th>
+                            <th>City</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dakota Rice</td>
+                                    <td>$36,738</td>
+                                    <td>Niger</td>
+                                    <td>Oud-Turnhout</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Minerva Hooper</td>
+                                    <td>$23,789</td>
+                                    <td>Curaçao</td>
+                                    <td>Sinaai-Waas</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Sage Rodriguez</td>
+                                    <td>$56,142</td>
+                                    <td>Netherlands</td>
+                                    <td>Baileux</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Philip Chaney</td>
+                                    <td>$38,735</td>
+                                    <td>Korea, South</td>
+                                    <td>Overland Park</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Doris Greene</td>
+                                    <td>$63,542</td>
+                                    <td>Malawi</td>
+                                    <td>Feldkirchen in Kärnten</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Mason Porter</td>
+                                    <td>$78,615</td>
+                                    <td>Chile</td>
+                                    <td>Gloucester</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Sage Rodriguez</td>
+                                    <td>$56,142</td>
+                                    <td>Netherlands</td>
+                                    <td>Baileux</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Philip Chaney</td>
+                                    <td>$38,735</td>
+                                    <td>Korea, South</td>
+                                    <td>Overland Park</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Doris Greene</td>
+                                    <td>$63,542</td>
+                                    <td>Malawi</td>
+                                    <td>Feldkirchen in Kärnten</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Mason Porter</td>
+                                    <td>$78,615</td>
+                                    <td>Chile</td>
+                                    <td>Gloucester</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="row-bott"
+
+                            <h2>  <small>Load More</small> </h2>
+
+
+                            <span class="material-symbols-outlined">
+                                expand_circle_down
+                            </span>
+
+                     </div>
+                <!-- break -->
+
+                <div class="card strpied-tabled-with-hover">
+                    <div class="card-header">
+                        <h4 class="card-title">Mixed</h4>
+                        <p class="card-category">Here is a subtitle for this table</p>
+                    </div>
+                    <div class="card-body table-full-width table-responsive">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Salary</th>
+                            <th>Country</th>
+                            <th>City</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Sage Rodriguez</td>
+                                    <td>$56,142</td>
+                                    <td>Netherlands</td>
+                                    <td>Baileux</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Philip Chaney</td>
+                                    <td>$38,735</td>
+                                    <td>Korea, South</td>
+                                    <td>Overland Park</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Doris Greene</td>
+                                    <td>$63,542</td>
+                                    <td>Malawi</td>
+                                    <td>Feldkirchen in Kärnten</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Mason Porter</td>
+                                    <td>$78,615</td>
+                                    <td>Chile</td>
+                                    <td>Gloucester</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dakota Rice</td>
+                                    <td>$36,738</td>
+                                    <td>Niger</td>
+                                    <td>Oud-Turnhout</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Minerva Hooper</td>
+                                    <td>$23,789</td>
+                                    <td>Curaçao</td>
+                                    <td>Sinaai-Waas</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Sage Rodriguez</td>
+                                    <td>$56,142</td>
+                                    <td>Netherlands</td>
+                                    <td>Baileux</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Philip Chaney</td>
+                                    <td>$38,735</td>
+                                    <td>Korea, South</td>
+                                    <td>Overland Park</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Doris Greene</td>
+                                    <td>$63,542</td>
+                                    <td>Malawi</td>
+                                    <td>Feldkirchen in Kärnten</td>
+                                    <td class="topicPic"><img src="https://picsum.photos/50"></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Mason Porter</td>
+                                    <td>$78,615</td>
+                                    <td>Chile</td>
+                                    <td>Gloucester</td>
+                                    <td class="topicPic"><img src="https://picsum.photos/50"></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="card card-plain table-plain-bg">
-                        <div class="card-header ">
-                            <h4 class="card-title">Table on Plain Background</h4>
-                            <p class="card-category">Here is a subtitle for this table</p>
-                        </div>
-                        <div class="card-body table-full-width table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Salary</th>
-                                    <th>Country</th>
-                                    <th>City</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>$36,738</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Minerva Hooper</td>
-                                        <td>$23,789</td>
-                                        <td>Curaçao</td>
-                                        <td>Sinaai-Waas</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Sage Rodriguez</td>
-                                        <td>$56,142</td>
-                                        <td>Netherlands</td>
-                                        <td>Baileux</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Philip Chaney</td>
-                                        <td>$38,735</td>
-                                        <td>Korea, South</td>
-                                        <td>Overland Park</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Doris Greene</td>
-                                        <td>$63,542</td>
-                                        <td>Malawi</td>
-                                        <td>Feldkirchen in Kärnten</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Mason Porter</td>
-                                        <td>$78,615</td>
-                                        <td>Chile</td>
-                                        <td>Gloucester</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                <div class="row-bott"
+
+                            <h2>  <small>Load More</small> </h2>
+
+                            <span class="material-symbols-outlined">
+                               expand_circle_down
+                            </span>
+
+                     </div>
+                <!-- break -->
+
+                <div class="card strpied-tabled-with-hover">
+                    <div class="card-header ">
+                        <h4 class="card-title">Negative</h4>
+                        <p class="card-category">Here is a subtitle for this table</p>
+                    </div>
+                    <div class="card-body table-full-width table-responsive">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Salary</th>
+                            <th>Country</th>
+                            <th>City</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Sage Rodriguez</td>
+                                    <td>$56,142</td>
+                                    <td>Netherlands</td>
+                                    <td>Baileux</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Philip Chaney</td>
+                                    <td>$38,735</td>
+                                    <td>Korea, South</td>
+                                    <td>Overland Park</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Doris Greene</td>
+                                    <td>$63,542</td>
+                                    <td>Malawi</td>
+                                    <td>Feldkirchen in Kärnten</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Mason Porter</td>
+                                    <td>$78,615</td>
+                                    <td>Chile</td>
+                                    <td>Gloucester</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dakota Rice</td>
+                                    <td>$36,738</td>
+                                    <td>Niger</td>
+                                    <td>Oud-Turnhout</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Minerva Hooper</td>
+                                    <td>$23,789</td>
+                                    <td>Curaçao</td>
+                                    <td>Sinaai-Waas</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Sage Rodriguez</td>
+                                    <td>$56,142</td>
+                                    <td>Netherlands</td>
+                                    <td>Baileux</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Philip Chaney</td>
+                                    <td>$38,735</td>
+                                    <td>Korea, South</td>
+                                    <td>Overland Park</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Doris Greene</td>
+                                    <td>$63,542</td>
+                                    <td>Malawi</td>
+                                    <td>Feldkirchen in Kärnten</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Mason Porter</td>
+                                    <td>$78,615</td>
+                                    <td>Chile</td>
+                                    <td>Gloucester</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
+                <div class="row-bott"
+                            <h2>  <small>Load More</small> </h2>
+                            <span class="material-symbols-outlined">
+                               expand_circle_down
+                            </span>
+                     </div>
+
+
+
+
             </div>
         </div>
     </div>
 
-{% endblock content %}
+    {% endblock content %}
 
-<!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+    <!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}{% endblock javascripts %}

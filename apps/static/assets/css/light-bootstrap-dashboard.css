@@ -27,6 +27,8 @@ button.close {
   font-family: "Roboto","Helvetica Neue",Arial,sans-serif;
   font-weight: 400; }
 
+
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-weight: 300;
   margin: 30px 0 15px; }
@@ -384,17 +386,18 @@ body > .navbar-collapse {
   .sidebar[data-image]:after, .sidebar.has-image:after,
   body > .navbar-collapse[data-image]:after,
   body > .navbar-collapse.has-image:after {
-    opacity: .77; }
+    opacity: .86; }
   .sidebar[data-color="black"]:after,
   body > .navbar-collapse[data-color="black"]:after {
     background: #777777;
     background: linear-gradient(to bottom, #777777 0%, #777777 100%);
     background-size: 150% 150%; }
-  .sidebar[data-color="blue"]:after,
-  body > .navbar-collapse[data-color="blue"]:after {
-    background: #1F77D0;
-    background: linear-gradient(to bottom, #1F77D0 0%, #533ce1 100%);
-    background-size: 150% 150%; }
+    .sidebar[data-color="blue"]:after,
+    body > .navbar-collapse[data-color="blue"]:after {
+        background: #1F77D0;
+        background: linear-gradient(to bottom, #4FB9F4 0%, #1FA5F1 100%);
+        background-size: 150% 150%;
+    }
   .sidebar[data-color="azure"]:after,
   body > .navbar-collapse[data-color="azure"]:after {
     background: #1DC7EA;
@@ -426,7 +429,9 @@ body > .navbar-collapse {
   position: relative;
   float: right;
   width: calc(100% - 260px);
-  min-height: 100%; }
+  min-height: 100%;
+  
+}
   .main-panel > .content {
     padding: 30px 15px;
     min-height: calc(100% - 123px); }
@@ -1332,7 +1337,9 @@ body > .navbar-collapse {
 .navbar-transparent .navbar-brand, [class*="navbar-ct"] .navbar-brand {
   color: #FFFFFF;
   opacity: 0.9;
-  filter: alpha(opacity=90); }
+  filter: alpha(opacity=90); 
+  
+}
   .navbar-transparent .navbar-brand:focus, .navbar-transparent .navbar-brand:hover, [class*="navbar-ct"] .navbar-brand:focus, [class*="navbar-ct"] .navbar-brand:hover {
     background-color: transparent;
     opacity: 1;
@@ -1723,7 +1730,7 @@ Copyright (c) 2015 Daniel Eden
 .card {
   border-radius: 4px;
   background-color: #FFFFFF;
-  margin-bottom: 30px; }
+   }
   .card .card-image {
     width: 100%;
     overflow: hidden;
@@ -2549,12 +2556,17 @@ Copyright (c) 2015 Daniel Eden
   .main-panel {
     width: 100%; }
   .navbar-brand {
-    padding: 15px 15px; }
+    padding: 15px 15px;
+    
+  }
   .navbar-transparent {
     padding-top: 15px;
     background-color: rgba(0, 0, 0, 0.45); }
   body {
-    position: relative; }
+    position: relative; 
+   
+  }
+  height: 100%;
   .wrapper {
     left: 0;
     background-color: white; }
@@ -3332,3 +3344,230 @@ License - nucleoapp.com/license/
 /* all icon font classes list here */
 
 /*# sourceMappingURL=light-bootstrap-dashboard.css.map */
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #333;
+    text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
+/*
+ * Base structure
+ */
+
+
+.cover-container {
+    max-width: 68em;
+    padding-top: 15px;
+    
+}
+
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+
+icons {
+    max-width: 5%;
+    height: auto;
+}
+
+.b-example-divider {
+    height: 0.15rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    border-radius: 3rem;
+}
+
+@media (min-width: 992px) {
+    .rounded-lg-3 {
+        border-radius: .3rem;
+    }
+}
+
+.my-5 {
+    
+    line-height: 1.2;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+    background-color: white;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  
+    border: 2px solid #666;
+    margin: 0 auto;
+   
+    background-color: #bbb;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+}
+
+icon-small{
+    width: 25%;
+    height: auto;
+
+}
+.column   {
+   
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-bottom: 15px;
+}
+.row-bott {
+    margin-top:3px;
+    text-align: right;
+    margin-bottom: 30px;
+    
+}
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48
+}
+
+.subscribe-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe-prompt {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subscribe-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+    .subscribe-input::placeholder {
+        color: #999;
+    }
+
+.subscribe-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .subscribe-button:hover {
+        background-color: #0056b3;
+    }
+
+    .hero-container{
+        height: 100%;
+    }
+
+.form-container {
+    max-width: 400px;
+    margin: 85px auto 85px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: auto;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .form-container button:hover {
+        background-color: #0056b3;
+    }
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+

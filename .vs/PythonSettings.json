@@ -1,0 +1,5 @@
+{
+  "SuppressConfigureTestFrameworkPrompt": "true",
+  "SuppressEnvironmentCreationPrompt": true,
+  "Interpreter": "Global|VisualStudio|flask sever envir"
+}

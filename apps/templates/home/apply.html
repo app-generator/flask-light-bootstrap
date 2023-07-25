@@ -1,0 +1,70 @@
+﻿{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<style>
+    .submit {
+        text-align :right;
+        
+    }
+    .row {
+        display: flex;
+        padding: 20px;
+        justify-content:center ;
+    }
+</style>
+
+<div class="form-container">
+    <h2>API Membership Sign-up</h2>
+    <form method="POST" action="process_signup.php">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+        <label for="organization">Organization/Company:</label>
+        <input type="text" id="organization" name="organization" placeholder="Your organization/company name">
+
+        <label for="usage-intent">Intended API Usage:</label>
+        <textarea id="usage-intent" name="usage-intent" placeholder="Briefly describe your intended API usage"></textarea>
+
+        <label for="usage-intent">API Usage Details::</label>
+        <textarea id="usage-intent" name="usage-intent" placeholder="Depending on the nature of your API requirements, we may request additional information, such as the expected number of API calls per month, desired data endpoints, or specific integration needs."></textarea>
+
+
+        <div class="row">
+
+
+            <input type="checkbox" id="myCheckbox" name="myCheckbox">
+            <label class="col-md-auto ms-auto" for="myCheckbox">Agree to Terms and conditions</label>
+        </div>
+        <div class="row">
+            <button class="col align-self-end" type="submit">Apply</button>
+        </div>
+       
+    </form>
+</div>
+
+
+<!-- html goes here -->
+    {% endblock content %}
+<!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
+
+        demo.showNotification();
+
+    });
+</script>
+
+    {% endblock javascripts %}

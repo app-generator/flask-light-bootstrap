@@ -10,7 +10,8 @@ from flask_login import (
     logout_user
 )
 
-from apps import db, login_manager
+from apps import login_manager
+from apps.dbModels import dbPerform, dbActionInsertUser, dbActionRetreiveUser
 from apps.authentication import blueprint
 from apps.authentication.forms import LoginForm, CreateAccountForm
 from apps.authentication.models import Users
@@ -20,7 +21,8 @@ from apps.authentication.util import verify_pass
 
 @blueprint.route('/')
 def route_default():
-    return redirect(url_for('authentication_blueprint.login'))
+   # return redirect(url_for('authentication_blueprint.login'))
+   return redirect(url_for('home_blueprint.index'))
 
 
 # Login & Registration
@@ -35,7 +37,8 @@ def login():
         password = request.form['password']
 
         # Locate user
-        user = Users.query.filter_by(username=username).first()
+        username, password, billingDate, isPremium  = dbPerform(dbActionRetreiveUser(username, password,'2023-07-23', True  ), True)
+        #name, password, email, billingDate, isPremium
 
         # Check the password
         if user and verify_pass(password, user.password):
@@ -80,8 +83,9 @@ def register():
 
         # else we can create the user
         user = Users(**request.form)
-        db.session.add(user)
-        db.session.commit()
+        dbPerform(dbActionInsertUser('users',username, email, 0), False)
+        print('user created')
+        #tableName, db, name, password, email, billingDate, isPremium
 
         # Delete user from session
         logout_user()

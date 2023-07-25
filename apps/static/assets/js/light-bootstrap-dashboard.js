@@ -26,6 +26,7 @@ var mobile_menu_visible = 0,
     $sidebar,
     isWindows;
 
+
 $(document).ready(function() {
     window_width = $(window).width();
 
@@ -61,7 +62,11 @@ $(document).ready(function() {
 $(window).resize(function() {
     if ($(window).width() <= 991) {
         lbd.initRightMenu();
-    }
+    } 
+    if ($(window).width() >= 992) {
+        lbd.initRightMenu();
+    } 
+   
 });
 
 lbd = {
@@ -202,3 +207,6 @@ function debounce(func, wait, immediate) {
         if (immediate && !timeout) func.apply(context, args);
     };
 };
+
+
+

@@ -4,21 +4,25 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 from flask_login import UserMixin
-
-from apps import db, login_manager
-
+from apps import login_manager
+from apps.dbModels import dbPerform, dbActionRetreiveUser
 from apps.authentication.util import hash_pass
+import os
 
-class Users(db.Model, UserMixin):
 
-    __tablename__ = 'Users'
 
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(64), unique=True)
-    email = db.Column(db.String(64), unique=True)
-    password = db.Column(db.LargeBinary)
+class Users( UserMixin):
 
-    def __init__(self, **kwargs):
+    def __init__(self, user, email, password, activePremium, billingDate):
+        self.uid = uid
+        self.user = user
+        self.email = email
+        self.password = password
+        self.activePremium = activePremium
+        self.billingDate = billingDate
+
+    def hash_pass( **kwargs):
+
         for property, value in kwargs.items():
             # depending on whether value is an iterable or not, we must
             # unpack it's value (when **kwargs is request.form, some values
@@ -32,17 +36,37 @@ class Users(db.Model, UserMixin):
 
             setattr(self, property, value)
 
-    def __repr__(self):
-        return str(self.username)
+        
+    
+    def saveToDB():
+         dbPerform(dbActionRetreiveUser('users', name, password, email, billingDate, activePremium), False)
 
+    def getUserbyEmail():
+        user = dbPerform(dbActionRetreiveUser(email), True)
+        return user
+
+    def __repr__(self):
+          return str(username)
+
+        
 
 @login_manager.user_loader
-def user_loader(id):
-    return Users.query.filter_by(id=id).first()
+def user_loader(uid):
+    user = request.form.get('uid')
+    if id:
+        user = dbPerform(dbActionRetreiveUser(uid), true)
+        return user if user else None
+    return  none
 
 
 @login_manager.request_loader
 def request_loader(request):
+    
     username = request.form.get('username')
-    user = Users.query.filter_by(username=username).first()
-    return user if user else None
+    print(" request made")
+    
+    if username:
+        print("user requested")
+        user = dbPerform(dbActionRetreiveUser(username), True)
+        return user if user else None
+    return None
