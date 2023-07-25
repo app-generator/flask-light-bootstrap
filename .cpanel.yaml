@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/example/public_html/
+    - export DEPLOYPATH=/home/weblennp/repositories/Weblytics-Master
     - /bin/cp -R images $DEPLOYPATH
