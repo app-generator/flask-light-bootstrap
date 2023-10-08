@@ -1,7 +1,14 @@
 # Change Log
 
+## [1.0.6] 2023-10-08
+### Changes
+
+- Update Dependencies
+- Silent fallback to SQLite
+- CI/CD for Render
+
 ## [1.0.5] 2022-06-11
-### Improvements
+### Changes
 
 - Built with [Light Bootstrap Generator](https://appseed.us/generator/light-bootstrap-dashboard/)
  - Timestamp: `2022-06-11 12:19`
